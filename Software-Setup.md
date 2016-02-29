@@ -48,8 +48,8 @@ If that works, then enter the following commands.
 `python -m pip install kivy`  
 
 *Git*:  
-Download and install git from https://git-scm.com/download
-
+Download and install git from https://git-scm.com/download  
+There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
 Mac OS X
 --------
