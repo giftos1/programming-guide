@@ -3,7 +3,7 @@ CP1404 Getting Started
 Software Setup
 ==============
 
-To get started, you only need *Python 3*, but to get _everything_ setup and running on your own computer, you need the following:
+To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following:
 * Python
 * PyCharm
 * Kivy
@@ -17,18 +17,29 @@ For All OS
 * *PyCharm*: Dowload the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html
 Enter your new account details when asked in PyCharm installation/setup.
 * Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
-** Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
-** On Pycharm’s main menu, click "File"-> "Import" (or Import Settings)
-** Select the .jar file you just downloaded and PyCharm will present a dialog with filetypes ticked. Click OK.
-** Restart PyCharm.
+* * Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
+* * On Pycharm’s main menu, click "File"-> "Import" (or Import Settings)
+* * Select the .jar file you just downloaded and PyCharm will present a dialog with filetypes ticked. Click OK.
+* * Restart PyCharm.
 
 Windows
 -------
-Download and install ​*Python*​: https://www.python.org/downloads 
-On Windows, *you must get version 3.4.4 (not 3.5)*​ for Kivy to work. Choose the option ​*Add python.exe to search path*​ if you have it when you install.
+*Python*​
+On Windows, **you must get version 3.4.4 (not 3.5)*​* for Kivy 1.9.1 to work. 
+Download and install ​from: https://www.python.org/downloads 
+Choose the option ​*Add python.exe to search path*​ if you have it when you install.
 
 *Kivy*​
-- Windows users, follow the install instructions at: http://kivy.org/docs/installation/installation.html
+The Windows instructions require you to type commands in a *Command Prompt* window.
+Run the Command Prompt: Hold the Windows key and press R (for run) then type `cmd.exe` and press Enter
+Then in the black window, type `python --version`
+If this shows you you have Python 3.4.4 then continue.
+If you get an error (python is an unknown command), then you either need to add python to your path or change into the directory you installed Python to. In most cases, this is C:\Python34
+Type `cd c:\Python34`
+
+`python -m pip install --upgrade pip wheel setuptools`
+`python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew --extra-index-url https://kivy.org/downloads/packages/simple`
+`python -m pip install kivy`
 
 * Download and install *Git*: https://git-scm.com/download
 brew install git
