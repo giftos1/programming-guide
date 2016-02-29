@@ -1,5 +1,7 @@
 CP1404 Getting Started
 
+Software Setup - Get everything installed and running on Windows or Mac
+
 Software Setup
 ==============
 
