@@ -7,7 +7,7 @@ To get started, you only _need_ **Python 3**, but to get _everything_ setup and 
 * Kivy
 * Git
 
-Each of these tools have their own instructions available online, but here are some custom and extra details for our subject:
+Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything:
 
 For All Operating Systems
 -------------------------
@@ -57,7 +57,7 @@ I recommend installing and using *homebrew* to do any software installations you
 This is done using the *Terminal* on your Mac. If you haven't used the terminal much, you should try and get used to it. It's great!  
 The instructions here are for using homebrew (brew) commands you type in at the terminal. For other methods, see the respective websites.
 
-*Homebrew:*
+*Homebrew:*  
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 *Python 3:*  
