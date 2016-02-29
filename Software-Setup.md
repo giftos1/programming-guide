@@ -86,3 +86,11 @@ If you need help, ask in our #cp1404 Slack channel.
     `def build(self):`
         `return Button(text='hello world')`
 `TestApp().run()`
+
+
+GitHub
+------
+Now that you have Git running, you will want to create a GitHub account.  
+Go to https://github.com and sign up. *Be sure to use a username that easily identifies you.*
+
+Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories. Your assignment work should be in a private repository, so you need to do this step.
