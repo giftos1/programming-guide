@@ -67,7 +67,7 @@ The instructions here are for using homebrew (brew) commands you type in at the 
 `brew install git`
 
 *Kivy:*  
-`pip install hg`  
+`pip install mercurial`  
 `pip install cython`  
 `pip install hg+http://bitbucket.org/pygame/pygame`  
 `pip install kivy`  
