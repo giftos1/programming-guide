@@ -55,7 +55,8 @@ Mac OS X
 --------
 I recommend installing and using *homebrew* to do any software installations you can on Mac: http://brew.sh  
 This is done using the *Terminal* on your Mac. If you haven't used the terminal much, you should try and get used to it. It's great!  
-The instructions here are for using homebrew (brew) commands you type in at the terminal. For other methods, see the respective websites.
+The instructions here are for using commands you type in at the terminal. Please note that some of these commands, like the first one, are long lines that should be copied and pasted in one go, even though the page here might show them word-wrapped.  
+For installation methods other than using brew and pip, see the instructions on appropriate websites.
 
 *Homebrew:*  
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
