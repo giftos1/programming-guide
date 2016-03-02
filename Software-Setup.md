@@ -68,10 +68,12 @@ The instructions here are for using homebrew (brew) commands you type in at the 
 
 *Kivy:*  
 `brew install hg`  
+`pip3 install --upgrade pip`
 `pip install cython`  
 `pip install hg+http://bitbucket.org/pygame/pygame`  
 `pip install kivy`  
 
+(The second command above upgrades pip3 AND links the command `pip` to `pip3`, so you don't get `pip: command not found` errors.)
 
 Test Setup
 ----------
