@@ -37,7 +37,7 @@ Then in the black window, type:
 
 If this shows you that you have Python 3.4.4 then continue with the commands below.  
 If you get an error (python is an unknown command), then you either need to add python to your path or change into the directory you installed Python to. In most cases, this is C:\Python34 so type:  
-`cd c:\Python34`
+`cd c:\Python34`  
 `python --version`  
 
 If that works, then enter the following commands.  
