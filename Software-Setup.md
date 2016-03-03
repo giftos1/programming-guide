@@ -78,17 +78,10 @@ For installation methods other than using brew and pip, see the instructions on 
 
 Test Setup
 ----------
-To test it's all working, create a PyCharm project, create a new Python file, and enter the code below. Run it by right-clicking in the code window and choosing "Run..."  
+To test it's all working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/test_setup.py (or download this file to your project folder.  
+Run it by right-clicking in the code window and choosing "Run..."  
 If you can run it successfully, it's all good. **Celebrate!**  
 If you need help, ask in our #cp1404 Slack channel.  
-
-
-`from kivy.app import App`  
-`from kivy.uix.button import Button`  
-`class TestApp(App):`  
-`    def build(self):`  
-`        return Button(text='hello world')`  
-`TestApp().run()`  
 
 
 GitHub
