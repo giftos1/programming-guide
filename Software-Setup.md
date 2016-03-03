@@ -44,7 +44,7 @@ If that works, then enter the following commands.
 (Note that there's no shortcut key for pasting into a command prompt window, but you can access paste by right-clicking in the title bar, then choosing Paste from the Edit menu.)
 
 `python -m pip install --upgrade pip wheel setuptools`  
-`python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew --extra-index-url https://kivy.org/downloads/packages/simple`  
+`python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple`  
 `python -m pip install kivy`  
 
 *Git*:  
