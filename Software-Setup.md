@@ -83,12 +83,12 @@ If you can run it successfully, it's all good. **Celebrate!**
 If you need help, ask in our #cp1404 Slack channel.  
 
 
-`from kivy.app import App`
-`from kivy.uix.button import Button`
-`class TestApp(App):`
-    `def build(self):`
-        `return Button(text='hello world')`
-`TestApp().run()`
+`from kivy.app import App`  
+`from kivy.uix.button import Button`  
+`class TestApp(App):`  
+    `def build(self):`  
+        `return Button(text='hello world')`  
+`TestApp().run()`  
 
 
 GitHub
