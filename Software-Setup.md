@@ -70,9 +70,9 @@ For installation methods other than using brew and pip, see the instructions on 
 *Kivy:*  
 `brew install hg sdl2`  
 `pip3 install --upgrade pip`
-`pip install cython`  
-`pip install hg+http://bitbucket.org/pygame/pygame`  
-`pip install kivy`  
+`pip3 install cython`  
+`pip3 install hg+http://bitbucket.org/pygame/pygame`  
+`pip3 install kivy`  
 
 (The second command above upgrades pip3 AND links the command `pip` to `pip3`, so you don't get `pip: command not found` errors.)
 
