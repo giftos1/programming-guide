@@ -68,13 +68,13 @@ For installation methods other than using brew and pip, see the instructions on 
 `brew install git`
 
 *Kivy:*  
-`brew install hg sdl2`  
+`brew install hg sdl sdl2`  
 `pip3 install --upgrade pip`
 `pip3 install cython`  
 `pip3 install hg+http://bitbucket.org/pygame/pygame`  
 `pip3 install kivy`  
 
-(The second command above upgrades pip3 AND links the command `pip` to `pip3`, so you don't get `pip: command not found` errors.)
+(The second command above should upgrade pip3 AND links the command `pip` to `pip3`, so you don't get `pip: command not found` errors. If you do, just use `pip3` anywhere you need `pip`.)
 
 Test Setup
 ----------
