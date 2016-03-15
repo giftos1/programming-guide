@@ -81,7 +81,7 @@ Test Setup
 To test it's all working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/test_setup.py (or download this file to your project folder.  
 Run it by right-clicking in the code window and choosing "Run..."  
 If you can run it successfully, it's all good. **Celebrate!**  
-If you need help, ask in our #cp1404 Slack channel.  
+If you need help, ask.
 
 
 GitHub
