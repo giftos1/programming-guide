@@ -89,4 +89,7 @@ GitHub
 Now that you have Git running, you will want to create a GitHub account.  
 Go to https://github.com and sign up. *Be sure to use a username that easily identifies you.*
 
-Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories. Your assignment work should be in a private repository, so you need to do this step.
+Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories. Your assignment work should be in a private repository, so you need to do this step.  
+**Make sure to use your JCU email address when you sign up otherwise you don't get the educational deal.**
+
+Once you're signed up get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
