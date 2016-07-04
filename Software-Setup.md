@@ -42,7 +42,7 @@ If you get an error (python is an unknown command), then you either need to add 
     cd c:\Python34  
     python --version  
 
-If that works, then enter the following commands.  
+If that works, then enter the following three commands.  
 (Note that there's no shortcut key for pasting into a command prompt window, but you can access paste by right-clicking in the title bar, then choosing Paste from the Edit menu.)
 
     python -m pip install --upgrade pip wheel setuptools 
