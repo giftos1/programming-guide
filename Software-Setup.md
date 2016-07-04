@@ -33,15 +33,17 @@ Choose the option ​*Add python.exe to search path*​ when you install.
 The Windows instructions require you to type commands in a *Command Prompt* window.  
 Run the Command Prompt: Hold the Windows key and press R (for run) then type `cmd.exe` and press Enter  
 Then in the black window, type:  
-`python --version`
+
+    python --version
 
 If this shows you that you have Python 3.4.4 then continue with the commands below.  
 If you get an error (python is an unknown command), then you either need to add python to your path or change into the directory you installed Python to. In most cases, this is C:\Python34 so type:  
-`cd c:\Python34`  
-`python --version`  
+
+    cd c:\Python34  
+    python --version  
 
 If that works, then enter the following commands.  
-(Note that there's no shortcut key for pasting into a command prompt window, but you can access paste by right-clicking in the title bar, then choosing Paste from the Edit menu.)::
+(Note that there's no shortcut key for pasting into a command prompt window, but you can access paste by right-clicking in the title bar, then choosing Paste from the Edit menu.)
 
     python -m pip install --upgrade pip wheel setuptools 
     python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple  
@@ -59,15 +61,19 @@ The instructions here are for using commands you type in at the terminal. Please
 For installation methods other than using brew and pip, see the instructions on appropriate websites.
 
 *Homebrew:*  
+
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 *Python 3:*  
-`brew install python3`
+
+    brew install python3
 
 *Git:*  
-`brew install git`
+
+    brew install git
 
 *Kivy:*  
+
     brew install hg sdl sdl2  
     pip3 install --upgrade pip  
     pip3 install cython  
@@ -78,7 +84,7 @@ For installation methods other than using brew and pip, see the instructions on 
 
 Test Setup
 ----------
-To test it's all working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/test_setup.py (or download this file to your project folder.  
+To test it's all working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/check_setup.py (or download this file to your project folder.  
 Run it by right-clicking in the code window and choosing "Run..."  
 If you can run it successfully, it's all good. **Celebrate!**  
 If you need help, ask.
