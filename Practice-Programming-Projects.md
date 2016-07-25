@@ -37,15 +37,15 @@ Print a "progress bar" based on a percentage (number). E.g. 50% would print some
 
 Write a program that uses functions to do the following:
 
-    * Use a menu to present the user with options, as shown in the output below. Make a function for your menu that displays the menu text, gets the user's choice and converts it to uppercase (and returns it).
-    * Calculating a grade is based on the user's score and works like: <50 = N, 50-64 = P, 65-74 = C, 75-84 = D, >= 85 = HD.   
+* Use a menu to present the user with options, as shown in the output below. Make a function for your menu that displays the menu text, gets the user's choice and converts it to uppercase (and returns it).
+* Calculating a grade is based on the user's score and works like: <50 = N, 50-64 = P, 65-74 = C, 75-84 = D, >= 85 = HD.   
 (Floats should be handled, e.g. 74.95 is a C.)  
 Use a function that only calculates the grade, but does not display it.   
 **NOTE:** Very important. You could write a function that takes no parameters and returns nothing, but asks the user for a score and prints the grade, BUT then you could ONLY use this function in the situation where you want to do those two things. What if you wanted to read a file of scores and write the grades to another file? You'd need another nearly-identical function. 
 **SO INSTEAD**... Pass the score in as an input parameter and return the grade (string) - displaying it should be done in the main function.
-    * Use a "dummy" function for calculateGPA. So write a function definition that just prints "Your GPA is ...", but set up the main program so it calls this.  
+* Use a "dummy" function for calculateGPA. So write a function definition that just prints "Your GPA is ...", but set up the main program so it calls this.  
 This sort of programming is useful when you want to do a bit at a time - you can set it up and get your structure right, then come in and fill in the details later (see extension).
-    * You should have 4 functions including main. Think about what you should name them (verbs) and what the parameters and return values should be.  
+* You should have 4 functions including main. Think about what you should name them (verbs) and what the parameters and return values should be.  
 
 >         Name: Jimbo
 >         Hello Jimbo. Choose:
@@ -81,13 +81,15 @@ This sort of programming is useful when you want to do a bit at a time - you can
 >         >>> q
 >         Thank you.
 
-    * Add the calculateGPA facility to your grade program:
-        * It should ask the user for each of their subject scores (raw numbers), convert the score to a grade, convert the grade to a weight, then calculate the average of those.
-        * Use a while loop to get their scores until they enter a negative value (that's the sentinel or stopping condition).   
+* Add the calculateGPA facility to your grade program:
+* It should ask the user for each of their subject scores (raw numbers), convert the score to a grade, convert the grade to a weight, then calculate the average of those.
+* Use a while loop to get their scores until they enter a negative value (that's the sentinel or stopping condition).   
 If we were able to use lists, we could store each score for later and our GPA function could accept a list, but we will just calculate the total on the fly (like we did for average age last week), so we need to keep track of the number of subjects.
-        * Weights for GPA are: N = 1.5, P = 4, C = 5, D = 6, HD = 7
-        * Think about what functions you need to write and what functions you can reuse.
+* Weights for GPA are: N = 1.5, P = 4, C = 5, D = 6, HD = 7
+* Think about what functions you need to write and what functions you can reuse.
+
 3. Modify the above program so that the file also has subject codes - i.e. each line looks something like `CP1404 86`
+
 4. Write a program that allows the user to find how many times a word appears in a file. They should enter the filename and a word, and it tells them how many times the word is in that file.
 
 ## Lists and Dictionaries
@@ -97,7 +99,7 @@ E.g. it might print: B: 13, C: 12, D: 9, A: 4
 2. Modify the price checker program from the functions section so that product information is stored in a list - the checking function will take two parameters - lists that each contain description, quantity and price.
 3. Modify the word-counting program (from File I/O) so that the user can enter an arbitrary number of words and it prints the number of times each of those words occurs.
 4. Write a program to store your phone book in a dictionary. Give the user choices (menu) for adding, deleting, modifying and searching for entries.
-5. **_HARD _**_Sieve of Eratosthenes (about prime numbers)  
+5. **_HARD _** Sieve of Eratosthenes (about prime numbers)  
 _Let's say you need to display all the prime numbers from 2 to 10 billion (1010), because you want to impress your boss or something. To work out if a number is prime, you need to see if any of the prime numbers less than its square root divide it. So for numbers around 10 billion, we'd need to check every prime number up to about 100,000 to see if it's a divisor. But we don't want to waste our time recomputing all those prime numbers every single time we want to test a big number for primality. We want a list of primes up to 100,000, and the best (non-highly complicated) way to construct such a list is the Sieve of Eratosthenes (it's very likely that you don't know anywhere near enough maths to try the faster Quadratic Sieve. You can look it up on Wikipedia, or follow the guide below.
 
 Start off with a list of 100,001 Boolean values, all **True** (because let's assume a number is prime until we prove otherwise), so let's write **primalityList = [True] * (NUMBER_OF_PRIMES + 1)**.  
@@ -118,7 +120,7 @@ Now, for numbers up to NUMBER_OF_PRIMES squared, you just need to see if any of 
     6. etc. (you think of more)
 2. Take some of the earlier questions in the subject and in this projects list and convert them to use objects. Anywhere that you might have used multiple data items that were related can be combined (encapsulated) into a class.
 
-### Recursion
+## Recursion
 
 1. Write a recursive function that prints all of the numbers from a given input down to 0.
 2. Write a recursive function that displays all of the letters in a string. (Each function call displays one letter.)
