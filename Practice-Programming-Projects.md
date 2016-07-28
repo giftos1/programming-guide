@@ -9,6 +9,7 @@ You could do two versions - one with nested ifs and one with the 'and' operator.
 2. Write the **Kebab Kalkulator**: 
 The program should have base prices for small ($7.50) or large ($10) kebabs (constants).  
 The user should choose a size, and how many extra toppings they want: up to 2 toppings are free, 3 or more toppings are 50c each (but not counting the free ones!).  
+Examples: a small kebab with 3 toppings = $8, a large kebab with 2 toppings = $10, large with 10 = $14  
 Ask the user for their options, then print the final price.
 3. Implement an expert system based on a flowchart you make or find. Each diamond (in a properly drawn example) is a question.  
 Examples:
