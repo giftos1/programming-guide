@@ -6,7 +6,11 @@ Here is a collection of projects for you to practise your programming with, arra
 
 1. Write a program to check if someone can vote. They need to be 18 or over and be enrolled to vote.   
 You could do two versions - one with nested ifs and one with the 'and' operator.
-2. Implement an expert system based on a flowchart you make or find. Each diamond (in a properly drawn example) is a question.  
+2. Write the **Kebab Kalkulator**: 
+The program should have base prices for small ($7.50) or large ($10) kebabs (constants).  
+The user should choose a size, and how many extra toppings they want: up to 2 toppings are free, 3 or more toppings are 50c each (but not counting the free ones!).  
+Ask the user for their options, then print the final price.
+3. Implement an expert system based on a flowchart you make or find. Each diamond (in a properly drawn example) is a question.  
 Examples:
     1. http://3.bp.blogspot.com/_GY_NfovZtsk/RjjxEL2weSI/AAAAAAAAAFM/EeYNtwkhYW0/s400/problemsolving_flowchart.PNG
     2. http://xkcd.com/627/
