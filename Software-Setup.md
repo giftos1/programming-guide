@@ -74,7 +74,7 @@ For installation methods other than using brew and pip, see the instructions on 
 
 *Kivy:*  
 
-    brew install hg sdl sdl2  
+    brew install hg sdl sdl2 sdl2_image sdl2_ttf sdl2_mixer   
     pip3 install --upgrade pip  
     pip3 install cython  
     pip3 install hg+http://bitbucket.org/pygame/pygame  
