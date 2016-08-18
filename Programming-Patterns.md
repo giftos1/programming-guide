@@ -1,4 +1,4 @@
-This page contains standard 'patterns'
+This page contains standard 'patterns' that you should get used to. When you need to perform one of these tasks, follow the standard pattern.
 
 ## Error checking
 
@@ -32,7 +32,25 @@ This page contains standard 'patterns'
 
 ## Finding
 
+    for each item in items
+        if item matches what we're looking for
+            return result or set value and break
+
+(note no need for else or continue, it will move to the next item)
+
 ## Filtering
+
+
+    filtered_items
+    for each item in items
+        if item matches what we want
+            add item to filtered_items
+
+(note no need for else or continue, it will move to the next item)
+
+Note that Python (and many languages) have neat shortcuts for filtering, e.g. using *list comprehensions*:
+
+    filtered_items = [item for item in items if item matches what we want]
 
 ## "Innocent until proven guilty" Boolean validating
 
