@@ -54,3 +54,30 @@ Note that Python (and many languages) have neat shortcuts for filtering, e.g. us
 
 ## "Innocent until proven guilty" Boolean validating
 
+...
+
+## Working with Booleans
+
+You never need to compare to `True` or `False`. E.g. instead of:
+
+    if condition == True:
+    ... or
+    if condition == False:
+
+You can just use:
+
+    if condition:
+    ... or
+    if not condition:
+
+If you are ever returning (or setting a variable to) True/False depending on a condition, you can just return (or set) to the condition. So, instead of:
+
+    if condition:
+        return True
+    else:
+        return False
+
+You can just use:
+
+    return condition
+
