@@ -1,5 +1,24 @@
 This page contains standard 'patterns' that you should get used to. When you need to perform one of these tasks, follow the standard pattern.
 
+## Menus
+Use the if/elif.../else pattern in Python (switch statements in other languages)
+
+    display menu
+    get choice
+    while choice != <quit option>
+        if choice == <first option>
+            <do first task>
+        else if choice == <second option>
+            <do second task>
+        ...
+        else if choice == <n-th option>
+            <do n-th task>
+        else
+            display invalid input error message
+        display menu
+        get choice
+    <do final thing, if needed>
+
 ## Error checking
 
     <priming read - do something the loop depends on>
