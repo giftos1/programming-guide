@@ -44,7 +44,10 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
     while not valid_input:
         try:
             age = int(input("Age: "))
-            valid_input = True
+            if age < 0:
+                print("Age must be >= 0")
+            else:
+                valid_input = True
         except ValueError:  # or just  except:
             print("Invalid (not an integer)")
     print("Next year you will be", age + 1)
