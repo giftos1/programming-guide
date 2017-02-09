@@ -25,7 +25,10 @@ Add KV language auto-completion and syntax highlighting (PyCharm does not know a
 Windows
 -------
 *Python:*  
-On Windows, **you must get Python version 3.4.4 (not 3.5)** for Kivy 1.9.1 to work.  
+A Kivy installer is available at: https://github.com/KeyWeeUsr/KivyInstaller 
+(untested)
+
+(out of date now?) On Windows, **you must get Python version 3.4.4 (not 3.5)** for Kivy 1.9.1 to work.  
 Download and install Python 3.4 ​from: https://www.python.org/downloads  
 Choose the option ​*Add python.exe to search path*​ when you install.  
 
