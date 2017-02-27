@@ -24,11 +24,31 @@ Add KV language auto-completion and syntax highlighting (PyCharm does not know a
 
 Windows
 -------
-*Python:*  
-A Kivy installer is available at: https://github.com/KeyWeeUsr/KivyInstaller 
-(untested)
+*Git*:  
+Download and install git from https://git-scm.com/download  
+There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
-(out of date now?) On Windows, **you must get Python version 3.4.4 (not 3.5)** for Kivy 1.9.1 to work.  
+### Option 1 - Use a batch file to install Python and Kivy
+
+A Kivy installer batch file is available at: https://github.com/KeyWeeUsr/KivyInstaller 
+This needs to be modified: Change the lines: 
+
+    set cp3=cp35
+    set py3=3.5.2
+
+to:
+
+    set cp3=cp34
+    set py3=3.4.4
+
+and the batch file will install Python 3.4.4 with Kivy 1.9.1 correctly... hopefully. Instructions are on that GitHub project site. You run the commands from a Windows cmd.exe terminal.
+
+### Option 2 - Install Python 3.4.4 and Kivy
+
+*Python:*  
+
+On Windows, **you must get Python version 3.4.4 (not 3.5)** for Kivy 1.9.1 to work. Kivy does not work with higher versions of Python.  
+
 Download and install Python 3.4 ​from: https://www.python.org/downloads  
 Choose the option ​*Add python.exe to search path*​ when you install.  
 
@@ -51,10 +71,6 @@ If that works, then enter the following three commands.
     python -m pip install --upgrade pip wheel setuptools 
     python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple  
     python -m pip install kivy  
-
-*Git*:  
-Download and install git from https://git-scm.com/download  
-There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
 Mac OS X
 --------
