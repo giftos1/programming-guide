@@ -29,12 +29,11 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
 
 **Example:**
 
-    SECRET = 6
-    guess = int(input("? "))
-    while guess != SECRET:
-        print("Guess again!")
-        guess = int(input("? "))
-    print("You got it!")
+    age = int(input("Age: "))
+    while age < 0:
+        print("Invalid age!")
+        age = int(input("Age: "))
+    print("You are {} years old".format(age))
 
 ## Exception-based error checking
 
