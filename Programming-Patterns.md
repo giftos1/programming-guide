@@ -62,7 +62,7 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
 ## Filtering
 
 
-    filtered_items
+    filtered_items = new list
     for each item in items
         if item matches what we want
             add item to filtered_items
@@ -73,9 +73,6 @@ Note that Python (and many languages) have neat shortcuts for filtering, e.g. us
 
     filtered_items = [item for item in items if item matches what we want]
 
-## "Innocent until proven guilty" Boolean validating
-
-...
 
 ## Working with Booleans
 
