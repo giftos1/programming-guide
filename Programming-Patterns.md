@@ -1,5 +1,25 @@
 This page contains standard 'patterns' that you should get used to. When you need to perform one of these tasks, follow the standard pattern.
 
+## Main program structure
+For most programs, you will have a `main` function and a number of other functions.  
+Think of main as the whole program with the other functions as the tools that main uses, with the details abstracted away.  
+main should go at the top of your file, and someone reading your code for the first time should be able to look at main and understand what the program does... that is, main should "look like" the whole program. Example (structure).
+
+    function main()
+        opening statement
+        do_step1()
+        result = do_step2()
+        do_step2(result)
+        closing statement
+    
+    function step1()
+        ...
+    
+    function step2(parameter)
+        ...
+        return result
+
+
 ## Menus
 Use the if/elif.../else pattern in Python (switch statements in other languages)
 
