@@ -71,6 +71,22 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
             print("Invalid (not an integer)")
     print("Next year you will be", age + 1)
 
+## Function with error checking
+
+Suppose you have a function that should do a task provided there are no errors, like adding a value to a collection if it's valid.  
+In this case, you can check for errors first, then do the task if there are no errors... instead of checking it's valid and doing the task if it's valid.   
+The difference is in the nesting level. You want your main task to be at the highest level, not inside an if/else.  
+Example structure:  
+
+    function do_task(input)
+        if input has error 1
+            display error message 1
+            return
+        if input has error 2
+            display error message 2
+            return
+        do task (knowing we don't have any of the above errors)
+
 ## Finding
 
     for each item in items
