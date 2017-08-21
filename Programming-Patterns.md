@@ -140,3 +140,27 @@ You can just use:
 
     return condition
 
+## Function design
+
+In general, there are 3 kinds of functions, those that are designed to:  
+* get input (from the user or another source)
+* process data
+* produce output (to the console, file, or another sink)
+
+Very commonly, the structure in terms of parameters and return statements will look something like (example):
+
+    def main():
+        data = get_input()
+        result = process(data)
+        display(result)
+
+That is:   
+* input-getting functions don't take in parameters, but they do return what they get.  
+* data-processing functions do take in parameters (they do NOT get the input data from the user or other source), and they do return the results (they do NOT display/print/save the result)
+* output-producing functions do take in parameterr (what they are to display), but do not return anything
+
+### Why is this important?
+Some good ways to understand function design include asking these questions about function *reuse*:  
+* What if we wanted to rewrite the program's interface in French or Farsi? We should not have to change the processing function because it should not do any user interface things (input or output on the screen).  
+
+To be continued... 
