@@ -3,7 +3,11 @@ This page contains standard 'patterns' that you should get used to. When you nee
 ## Main program structure
 For most programs, you will have a `main` function and a number of other functions.  
 Think of main as the whole program with the other functions as the tools that main uses, with the details abstracted away.  
-main should go at the top of your file, and someone reading your code for the first time should be able to look at main and understand what the program does... that is, main should "look like" the whole program. Example (structure).
+main should go at the top of your file, and someone reading your code for the first time should be able to look at main and understand what the program does... that is, main should "look like" the whole program. Example structure:
+
+    """ module-level docstring """
+    import statements
+    constants
 
     function main()
         opening statement
@@ -19,6 +23,7 @@ main should go at the top of your file, and someone reading your code for the fi
         ...
         return result
 
+    main()
 
 ## Menus
 Use the if/elif.../else pattern in Python (switch statements in other languages)
