@@ -162,5 +162,5 @@ That is:
 ### Why is this important?
 Some good ways to understand function design include asking these questions about function *reuse*:  
 * What if we wanted to rewrite the program's interface in French or Farsi? We should not have to change the processing function because it should not do any user interface things (input or output on the screen).  
-
-To be continued... 
+* What if we wanted to get our input from a file instead of the user? We should not have to change the processing function because it should not get any user input.
+* Same as above for if we wanted to write our output to a file instead of display it on the screen... the processing function shouldn't care where the data (input parameters) comes from, or where the results (return values) go, since that's not it's job.
