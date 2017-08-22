@@ -154,6 +154,7 @@ Very commonly, the structure in terms of parameters and return statements will l
         result = process(data)
         display(result)
 
+(This is a simplification to make the point about reusability, not a rule that never changes.)  
 That is:   
 * input-getting functions don't take in parameters, but they do return what they get.  
 * data-processing functions do take in parameters (they do NOT get the input data from the user or other source), and they do return the results (they do NOT display/print/save the result)
