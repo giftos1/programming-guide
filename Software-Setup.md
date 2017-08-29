@@ -96,8 +96,7 @@ For installation methods other than using brew and pip, see the instructions on 
     brew install hg sdl sdl2 sdl2_image sdl2_ttf sdl2_mixer   
     pip3 install --upgrade pip  
     pip3 install cython  
-    pip3 install hg+http://bitbucket.org/pygame/pygame  
-    pip3 install kivy  
+    USE_OSX_FRAMEWORKS=0 pip3 install https://github.com/kivy/kivy/zipball/master  
 
 (The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. If you do, just use `pip3` anywhere you need `pip`.)
 
