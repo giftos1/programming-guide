@@ -43,7 +43,7 @@ There are a number of options for things like git-bash and what console you want
 Download and install Python 3 ​from: https://www.python.org/downloads  
 Choose the option ​*Add python.exe to search path*​ when you install.
 
-*Kivy:*​  
+*Kivy:*​
 See https://kivy.org/docs/installation/installation-windows.html which are summarised/expanded below:  
 
 The Windows instructions require you to type commands in a *Command Prompt* window.  
