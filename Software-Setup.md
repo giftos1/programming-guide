@@ -13,14 +13,24 @@ For All Operating Systems
 -------------------------
 *PyCharm:*  
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+* Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
 Enter your new account details when asked in PyCharm installation/setup.
 
 Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
 * Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
-* On Pycharm’s main menu, click "File"-> "Import" (or Import Settings)
-* Select the .jar file you just downloaded and PyCharm will present a dialog with filetypes ticked. Click OK.
+* On PyCharm’s main menu, click Import Settings or File > Import (depending on your OS)
+* Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
 * Restart PyCharm.
+
+GitHub
+------
+If you do not have one already, create a GitHub account.  
+Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*
+
+Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories.  
+**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni share these addresses. **So, choose the option that lets you upload proof, and upload a photo of your current student ID with the date on it.**
+
+Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
 
 Windows
 -------
@@ -28,55 +38,44 @@ Windows
 Download and install git from https://git-scm.com/download  
 There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
-### Option 1 - Use a batch file to install Python and Kivy
-
-A Kivy installer batch file is available at: https://github.com/KeyWeeUsr/KivyInstaller 
-This needs to be modified: Change the lines: 
-
-    set cp3=cp35
-    set py3=3.5.2
-
-to:
-
-    set cp3=cp34
-    set py3=3.4.4
-
-and the batch file will install Python 3.4.4 with Kivy 1.9.1 correctly... hopefully. Instructions are on that GitHub project site. You run the commands from a Windows cmd.exe terminal.
-
-### Option 2 - Install Python 3.4.4 and Kivy
-
 *Python:*  
 
-On Windows, **you must get Python version 3.4.4 (not 3.5)** for Kivy 1.9.1 to work. Kivy does not work with higher versions of Python.  
-
-Download and install Python 3.4 ​from: https://www.python.org/downloads  
-Choose the option ​*Add python.exe to search path*​ when you install.  
+Download and install Python 3 ​from: https://www.python.org/downloads  
+Choose the option ​*Add python.exe to search path*​ when you install.
 
 *Kivy:*​  
+See https://kivy.org/docs/installation/installation-windows.html which are summarised/expanded below:  
+
 The Windows instructions require you to type commands in a *Command Prompt* window.  
-Run the Command Prompt: Hold the Windows key and press R (for run) then type `cmd.exe` and press Enter  
-Then in the black window, type:  
+Run the Command Prompt: Tap the Windows key to get the Start menu, then start typing "command prompt"... when you see it, right-click and choose "Run as Administrator"
+Then in the black window (that's the command prompt), type:  
 
     python --version
 
-If this shows you that you have Python 3.4.4 then continue with the commands below.  
-If you get an error (python is an unknown command), then you either need to add python to your path or change into the directory you installed Python to. In most cases, this is C:\Python34 so type:  
+If this shows you that you have Python, then continue with the commands below.  
+If you get an error (python is an unknown command), then you either need to add python to your PATH or change into the directory you installed Python to.  
+E.g. if this were C:\Python36 then type:  
 
-    cd c:\Python34  
+    cd c:\Python36  
     python --version  
 
-If that works, then enter the following three commands.  
-(Note that there's no shortcut key for pasting into a command prompt window, but you can access paste by right-clicking in the title bar, then choosing Paste from the Edit menu.)
+If that works, then enter the following commands.  
+(If the usual shortcut doesn't work for pasting into the command prompt window, you can access paste by right-clicking in the title bar, then choosing Paste from the Edit menu.)
 
     python -m pip install --upgrade pip wheel setuptools 
-    python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple  
+    python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+    python -m pip install kivy.deps.gstreamer
     python -m pip install kivy  
 
-Mac OS X
+Now you can run PyCharm, select your interpreter (the Python you just installed), and you should be able to run Python programs.  
+See below
+
+MacOS
 --------
-I recommend installing and using *homebrew* to do any software installations you can on Mac: http://brew.sh  
-This is done using the *Terminal* on your Mac. If you haven't used the terminal much, you should try and get used to it. It's great!  
-The instructions here are for using commands you type in at the terminal. Please note that some of these commands, like the first one, are long lines that should be copied and pasted in one go, even though the page here might show them word-wrapped.  
+I recommend installing and using *homebrew* to do any available software installations you can on Mac: http://brew.sh  
+This is done using the *Terminal* on your Mac. If you haven't used the terminal much, you should try and get used to it as it is a very useful and common developer tool.  
+The instructions here are for using commands you type in at the terminal.  
+*Please note* that some of these commands, like the first one, are long lines that should be copied and pasted in one go, even though the page here might show them word-wrapped.  
 For installation methods other than using brew and pip, see the instructions on appropriate websites.
 
 *Homebrew:*  
@@ -98,22 +97,18 @@ For installation methods other than using brew and pip, see the instructions on 
     pip3 install cython  
     USE_OSX_FRAMEWORKS=0 pip3 install https://github.com/kivy/kivy/zipball/master  
 
-(The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. If you do, just use `pip3` anywhere you need `pip`.)
+(The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. However, if you do get these errors, just use `pip3` anywhere it says `pip`.)
 
 Test Setup
 ----------
-To test it's all working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/check_setup.py (or download this file to your project folder.  
+To test it's working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/check_setup.py (or download this file to your project folder.  
 Run it by right-clicking in the code window and choosing "Run..."  
 If you can run it successfully, it's all good. **Celebrate!**  
-If you need help, ask.
 
+You can also test your Git & GitHub setup by using PyCharm to clone a repository and run the code:  
+Select VCS > Checkout from Version Control > GitHub  
+Then enter your GitHub username and password.  
+Enter our starter repo URL: `https://github.com/CP1404/Starter` in the prompt and open this as a new project.  
+Try and run the check_setup.py file.  
 
-GitHub
-------
-Now that you have Git running, you will want to create a GitHub account.  
-Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*
-
-Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories. Your assignment work should be in a private repository, so you need to do this step.  
-**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni share these addresses. **So, choose the option that lets you upload proof, and upload a photo of your current student ID with the date on it.**
-
-Once you're signed up get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
+If you need help, please ask.
