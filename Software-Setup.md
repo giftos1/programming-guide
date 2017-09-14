@@ -22,8 +22,8 @@ Add KV language auto-completion and syntax highlighting (PyCharm does not know a
 * Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
 * Restart PyCharm.
 
-GitHub
-------
+*GitHub:*
+
 If you do not have one already, create a GitHub account.  
 Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*
 
@@ -34,7 +34,7 @@ Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http
 
 Windows
 -------
-*Git*:  
+*Git:*  
 Download and install git from https://git-scm.com/download  
 There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
