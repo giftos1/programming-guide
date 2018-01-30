@@ -162,17 +162,15 @@ That is:
 
 ### Why is this important?
 Some good ways to understand function design include asking these questions about function *reuse*:  
-* What if we wanted to rewrite the program's interface in French or Farsi? We should not have to change the processing function because it should not do any user interface things (input or output on the screen).  
-* What if we wanted to get our input from a file instead of the user? We should not have to change the processing function because it should not get any user input.
+* What if we wanted to rewrite the program's interface in French or Farsi? We should not have to change the processing function, because it should not do any user interface things (input or output on the screen).  
+* What if we wanted to get our input from a file instead of the user? We should not have to change the processing function because it should not get any user input. A well-designed function *can* be used with input either from the user or a file (or anywhere), because it takes in the input as parameters.
 * Same as above for if we wanted to write our output to a file instead of display it on the screen... the processing function shouldn't care where the data (input parameters) comes from, or where the results (return values) go, since that's not it's job.
 * Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using the `assert` statement, or `doctest` module). You really can't easily "test" functions that get user input and print results in any automated way.
 
 ## Never
 Here are a few things you should _never_ do... You can consider these to be "anti-patterns".   
-("Never" is a strong word, and there may be some very rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
+("Never" is a strong word, and there may be some rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
 
-**Work in progress... To be completed:**
-
-* Replace function parameters
-* Convert to the same type
-* Use the verbose syntax for method calls
+* Never replace function parameters: If you have a function that takes in a parameter (x), you will never want to set that variable (x) immediately... otherwise, why would you pass it in?
+* Never convert to the same type: don't convert from type A to type A. E.g. in Python, the `input` function _always_ returns a _str_ type, so you *never* need to write something like `x = str(input("?"))`... or `y = int(0)`.
+* Never use the verbose (unbound) syntax for method calls unless you need it: You should always prefer the concise (bound) format. E.g. use `"Hello".upper()` not `str.upper("Hello")`.
