@@ -7,7 +7,7 @@ To get started, you only _need_ **Python 3**, but to get _everything_ setup and 
 * Kivy
 * Git
 
-Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything:
+Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything. Things change, and sometimes you'll find a different/better way is needed. If so, please contact me and let me know what needs updating.
 
 For All Operating Systems
 -------------------------
@@ -100,7 +100,10 @@ For installation methods other than using brew and pip, see the instructions on 
 
 Test Setup
 ----------
-To test it's working, create a PyCharm project, create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/check_setup.py (or download this file to your project folder.  
+To test it's working, create a PyCharm project, **making sure to select the local interpreter where you installed Kivy**.  
+_DO NOT_ use a new virtual environment (venv) for this or any other projects.  
+
+Create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/check_setup.py (or download this file to your project folder.  
 Run it by right-clicking in the code window and choosing "Run..."  
 If you can run it successfully, it's all good. **Celebrate!**  
 
