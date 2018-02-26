@@ -1,7 +1,7 @@
 Software Setup
 ==============
 
-To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following:
+To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following. *Note, please install these in the order below.*
 * Python
 * PyCharm
 * Kivy
@@ -12,6 +12,8 @@ Each of these tools have their own instructions available online, but here I've 
 For All Operating Systems
 -------------------------
 *PyCharm:*  
+After you have installed Python...  
+
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
 * Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
 Enter your new account details when asked in PyCharm installation/setup.
