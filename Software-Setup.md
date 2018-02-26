@@ -9,28 +9,13 @@ To get started, you only _need_ **Python 3**, but to get _everything_ setup and 
 
 Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything. Things change, and sometimes you'll find a different/better way is needed. If so, please contact me and let me know what needs updating.
 
-For All Operating Systems
--------------------------
-*PyCharm:*  
-After you have installed Python...  
-
-* Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
-Enter your new account details when asked in PyCharm installation/setup.
-
-Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
-* Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
-* On PyCharm’s main menu, click Import Settings or File > Import (depending on your OS)
-* Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
-* Restart PyCharm.
-
 *GitHub:*
 
 If you do not have one already, create a GitHub account.  
 Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*
 
 Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories.  
-**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni share these addresses. **So, choose the option that lets you upload proof, and upload a photo of your current student ID with the date on it.**
+**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni also have these addresses. **So, choose the option that lets you upload proof, and upload a photo of your current student ID with the date on it.**
 
 Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
 
@@ -71,8 +56,22 @@ If that works, then enter the following commands.
 Now you can run PyCharm, select your interpreter (the Python you just installed), and you should be able to run Python programs.  
 See below
 
+*PyCharm:*  
+After you have installed Python...  
+
+* Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
+* Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+Enter your new account details when asked in PyCharm installation/setup.
+
+Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
+* Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
+* On PyCharm’s main menu, click Import Settings or File > Import (depending on your OS)
+* Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
+* Restart PyCharm.
+
+
 MacOS
---------
+-----
 I recommend installing and using *homebrew* to do any available software installations you can on Mac: http://brew.sh  
 This is done using the *Terminal* on your Mac. If you haven't used the terminal much, you should try and get used to it as it is a very useful and common developer tool.  
 The instructions here are for using commands you type in at the terminal.  
@@ -100,6 +99,20 @@ For installation methods other than using brew and pip, see the instructions on 
 
 (The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. However, if you do get these errors, just use `pip3` anywhere it says `pip`.)
 
+*PyCharm:*  
+After you have installed Python...  
+
+* Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
+* Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+Enter your new account details when asked in PyCharm installation/setup.
+
+Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
+* Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
+* On PyCharm’s main menu, click Import Settings or File > Import (depending on your OS)
+* Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
+* Restart PyCharm.
+
+
 Test Setup
 ----------
 To test it's working, create a PyCharm project, **making sure to select the local interpreter where you installed Kivy**.  
@@ -110,9 +123,9 @@ Run it by right-clicking in the code window and choosing "Run..."
 If you can run it successfully, it's all good. **Celebrate!**  
 
 You can also test your Git & GitHub setup by using PyCharm to clone a repository and run the code:  
-Select VCS > Checkout from Version Control > GitHub  
-Then enter your GitHub username and password.  
-Enter our starter repo URL: `https://github.com/CP1404/Starter` in the prompt and open this as a new project.  
-Try and run the check_setup.py file.  
+Select *VCS > Checkout from Version Control > GitHub*  
+Then enter your GitHub username and password (not token, unless you want to use one).  
+Enter our starter repo URL: `https://github.com/CP1404/Starter` in the prompt, clone it to a new folder and open this as a new project.  
+Try and run the check_setup.py file. If it works, you should see a nice big hello button.  
 
 If you need help, please ask.
