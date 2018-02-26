@@ -1,7 +1,7 @@
 Software Setup
 ==============
 
-To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following. *Note, please install these in the order below.*
+To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following.
 * Python
 * PyCharm
 * Kivy
