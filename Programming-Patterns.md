@@ -25,6 +25,25 @@ main should go at the top of your file, and someone reading your code for the fi
 
     main()
 
+## While loops
+Almost all while loops follow the same standard pattern (as below with menus and error checking).  
+Do not force the loop to be True the first time by setting a value for your loop condition variable, and do not use `while True`... unless this is really the best way to do it.
+
+    <priming read - do something the loop will depend on, e.g. get/calculate a number>
+    while <condition based on something from above>:
+        <body of the loop - do the thing you want to repeat>
+        <same as the priming read again>
+    <do next thing now that the loop is finished (condition was false)>
+
+Example - number guessing game:
+
+    SECRET = 6
+    guess = int(input("? "))
+    while guess != SECRET:
+        print("Guess again!")
+        guess = int(input("? "))
+    print("You got it!")
+
 ## Menus
 Use the if/elif.../else pattern in Python (switch statements in other languages)
 
@@ -169,8 +188,9 @@ Some good ways to understand function design include asking these questions abou
 
 ## Never
 Here are a few things you should _never_ do... You can consider these to be "anti-patterns".   
-("Never" is a strong word, and there may be some rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
+("Never" is a strong word, and there will likely be some rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
 
 * Never replace function parameters: If you have a function that takes in a parameter (x), you will never want to set that variable (x) immediately... otherwise, why would you pass it in?
 * Never convert to the same type: don't convert from type A to type A. E.g. in Python, the `input` function _always_ returns a _str_ type, so you *never* need to write something like `x = str(input("?"))`... or `y = int(0)`.
 * Never use the verbose (unbound) syntax for method calls unless you need it: You should always prefer the concise (bound) format. E.g. use `"Hello".upper()` not `str.upper("Hello")`.
+* Never use `while True` loops if you can easily enough use a "standard" while loop. If you have to write an if statement to break out of a loop, that if-condition should probably just be your normal loop condition.
