@@ -113,9 +113,11 @@ Example structure:
 
 ## Finding
 
-    for each item in items
-        if item matches what we're looking for
-            return result or set value and break
+    function find(needle)
+        for each item in items
+            if item == needle (or however we compare to find the needle in the haystack)
+                return result, or set value and break
+        return None (since we did not find it)
 
 (note no need for else or continue, it will move to the next item)
 
