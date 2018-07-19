@@ -25,6 +25,15 @@ main should go at the top of your file, and someone reading your code for the fi
 
     main()
 
+## Loops
+In most languages, there are multiple kinds of loops and you should choose the most appropriate kind.  
+The most common choice is:
+
+- Use *for loops* for definite iteration, like `for item in sequence...`
+- Use *while loops* for indefinite iteration, like `while condition...`
+
+Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for! 
+
 ## While loops
 Almost all while loops follow the same standard pattern (as below with menus and error checking).  
 Do not force the loop to be True the first time by setting a value for your loop condition variable, and do not use `while True`... unless this is really the best way to do it.
