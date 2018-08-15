@@ -12,10 +12,11 @@ Each of these tools have their own instructions available online, but here I've 
 *GitHub:*
 
 If you do not have one already, create a GitHub account.  
-Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*
+Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*  
 
-Then, go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories.  
-**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni also have these addresses. **So, choose the option that lets you upload proof, and upload a photo of your current student ID with the date on it.**
+**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni also have these addresses. **So, in the following step, please choose the option that lets you upload proof, and upload a photo of your current student ID card with the date on it.**
+
+Go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories.  
 
 Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
 
