@@ -32,7 +32,8 @@ The most common choice is:
 - Use *for loops* for definite iteration, like `for item in sequence...`
 - Use *while loops* for indefinite iteration, like `while condition...`
 
-Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for! 
+Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for!  
+Using a for loop and maintaining your own counter (e.g. iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you. In Python, if you need _both_ the index and the element, use `enumerate`.
 
 ## While loops
 Almost all while loops follow the same standard pattern (as below with menus and error checking).  
