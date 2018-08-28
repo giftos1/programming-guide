@@ -198,6 +198,13 @@ Some good ways to understand function design include asking these questions abou
 * Same as above for if we wanted to write our output to a file instead of display it on the screen... the processing function shouldn't care where the data (input parameters) comes from, or where the results (return values) go, since that's not it's job.
 * Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using the `assert` statement, or `doctest` module). You really can't easily "test" functions that get user input and print results in any automated way.
 
+## Data storage
+Always store data in the best, most correct, format. E.g. if you read a *price* from a file, it will be a string, but you should store it as a float. If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it... leaving the variable as a float.
+
+In general, don't store derivable data. E.g. don't store *age* if you already have a *date of birth* (DOB).  
+Doing so can lead to inconsistency, e.g. your age doesn't get updated when "date - DOB" results in a different age. Just calculate the age when you need it and it can't be wrong.  
+This is a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
+
 ## Never
 Here are a few things you should _never_ do... You can consider these to be "anti-patterns".   
 ("Never" is a strong word, and there will likely be some rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
