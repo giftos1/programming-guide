@@ -91,16 +91,18 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
 
 ## Exception-based error checking
 
+You can't have a 'normal' priming read since it might crash before you get to the condition, so you need your try/except _inside_ a loop that you control.
+
 **Example:**
 
-    valid_input = False
-    while not valid_input:
+    is_valid_input = False
+    while not is_valid_input:
         try:
             age = int(input("Age: "))
             if age < 0:
                 print("Age must be >= 0")
             else:
-                valid_input = True
+                is_valid_input = True
         except ValueError:  # or just  except:
             print("Invalid (not an integer)")
     print("Next year you will be", age + 1)
