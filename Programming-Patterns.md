@@ -103,7 +103,7 @@ You can't have a 'normal' priming read since it might crash before you get to th
                 print("Age must be >= 0")
             else:
                 is_valid_input = True
-        except ValueError:  # or just  except:
+        except ValueError:
             print("Invalid (not an integer)")
     print("Next year you will be", age + 1)
 
