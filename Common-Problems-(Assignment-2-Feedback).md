@@ -33,8 +33,8 @@ Using "Is_Complete" in GUI is not ideal. Don't change the view to match the unde
 Doesn't show all book details.  
    
 # Error Handling
-try/except not used for year checking, so crashes when you enter a non-number year.  
-Allows negative years.  
+try/except not used for number of pages checking, so crashes when you enter a non-number number of pages.  
+Allows negative or 0 number of pages.  
 Doesn't check for valid category.  
 Error messages (order) don't match requirements.  
    
@@ -51,7 +51,7 @@ required/completed are backwards (r = required, not completed)
 Sorting by completed/required does not work properly - it should stay up to date when you click a book.  
 Sorting by anything should secondarily sort by title.   
 New book is not sorted until you change sorting.  
-Sorting by year is alphanumeric (string) instead of numeric (int).  
+Sorting by number of pages is alphanumeric (string) instead of numeric (int).  
 Title should be an option for sorting  
 Saves before closing the program.  
    
@@ -73,7 +73,7 @@ sort_bookcollection would be better as sort or sort_books (we know it's a BookCo
 completed doesn't sound enough like a Boolean (use is_completed).  
    
 # Code constructs
-in Book, year should be an int not a string.  
+in Book, number of pages should be an int not a string.  
 in Book, is_completed should be a Boolean not a string.  
 Unnecessary duplication in Book.str method (DRY principle).  
 Unnecessary duplication when creating book buttons (DRY principle).  
