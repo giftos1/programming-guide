@@ -9,7 +9,7 @@ To get started, you only _need_ **Python 3**, but to get _everything_ setup and 
 
 Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything. Things change, and sometimes you'll find a different/better way is needed. If so, please contact me and let me know what needs updating.
 
-*GitHub:*
+## GitHub:
 
 If you do not have one already, create a GitHub account.  
 Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*  
@@ -20,8 +20,8 @@ Go to https://education.github.com/discount_requests/new and enter your details 
 
 Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
 
-Windows
--------
+# Windows
+
 *Git:*  
 Download and install git from https://git-scm.com/download  
 There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
@@ -30,7 +30,7 @@ There are a number of options for things like git-bash and what console you want
 Download and install Python 3 ​from: https://www.python.org/downloads  
 Choose the option ​*Add python.exe to search path*​ when you install.
 
-*Kivy:*  
+*Kivy:*
 See https://kivy.org/docs/installation/installation-windows.html which are summarised/expanded below:  
 
 The Windows instructions require you to type commands in a *Command Prompt* window.  
@@ -57,11 +57,11 @@ If that works, then enter the following commands.
 Now you can run PyCharm, select your interpreter (the Python you just installed), and you should be able to run Python programs.  
 See below
 
-*PyCharm:*  
+*PyCharm:*
 After you have installed Python...  
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+* Download and install the *Professional* version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
 Enter your new account details when asked in PyCharm installation/setup.
 
 Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
@@ -71,8 +71,8 @@ Add KV language auto-completion and syntax highlighting (PyCharm does not know a
 * Restart PyCharm.
 
 
-MacOS
------
+# MacOS
+
 I recommend installing and using *homebrew* to do any available software installations you can on Mac: http://brew.sh  
 This is done using the *Terminal* on your Mac. If you haven't used the terminal much, you should try and get used to it as it is a very useful and common developer tool.  
 The instructions here are for using commands you type in at the terminal.  
@@ -104,7 +104,7 @@ For installation methods other than using brew and pip, see the instructions on 
 After you have installed Python...  
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download and install the Professional version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+* Download and install the *Professional* version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
 Enter your new account details when asked in PyCharm installation/setup.
 
 Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
@@ -114,9 +114,9 @@ Add KV language auto-completion and syntax highlighting (PyCharm does not know a
 * Restart PyCharm.
 
 
-Test Setup
-----------
-To test it's working, create a PyCharm project, **making sure to select the local interpreter where you installed Kivy**.  
+# Test Setup
+
+To test it's all working, create a PyCharm project, **making sure to select the local interpreter where you installed Kivy**.  
 _DO NOT_ use a new virtual environment (venv) for this or any other projects.  
 
 Create a new Python file, and enter the code from https://github.com/CP1404/Starter/blob/master/check_setup.py (or download this file to your project folder.  
