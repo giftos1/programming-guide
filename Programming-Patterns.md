@@ -25,12 +25,75 @@ main should go at the top of your file, and someone reading your code for the fi
 
     main()
 
+## Selection
+When you need to make a decision in your program, you would usually use one of the following patterns. Note that this is when you only need one decision with no repetition (see loops and error-checking for repetition).  
+
+The examples below will use situations where you want to print a *result* for a given *score*, where `scores` is a list of numbers (scores). Each situation could be stand-alone, or part of a loop, like `for score in scores:`
+
+### if with no else
+Use this if you want to do something when the condition is true, but do nothing when it's false.  
+In this example, we don't want to print anything for the non-exceptional scores, so there's no else.
+    
+    if score > 90:
+        print("That's exceptional!")
+
+Some beginning programmers use else for no reason, like the following example... That is 100% redundant and never of any value... Don't do it.
+
+    if score > 90:
+        print("That's exceptional!")
+    else:
+        pass
+
+### if, else
+Use this if you want to do something when the condition is true, and something different when it's false.  
+In this example, we want to print a result for the score no matter what its value is.
+Note that we do not need a second condition to handle the "fail" case, because if the score is not >= 50 we already know that it must be < 50.
+
+    if score >= 50:
+        print("Pass")
+    else:
+        print("Fail")
+
+### if, elif, else (or switch/case statement)
+Use this if you want to do something when the condition is true, and something different when it's false.  
+In this example, we want to print a result for the score no matter what its value is.
+
+    if score >= 90:
+        print("Excellent")
+    elif score >= 50:
+        print("Passable")
+    else:
+        print("Bad")
+
+### if, elif with no trailing else
+Similar to the if with no else, use this when you want to handle multiple possible results, but there will not be result in all cases. The results are mutually exclusive, but you're happy to do nothing in some cases.
+In this example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g. at graduation, they announce which graduates got a University medal, but they don't say which ones did not get a medal.)
+
+    if score >= 90:
+        print("You win a car!")
+    elif score >= 80:
+        print("You win a horse :)")
+
+### if, if, if
+Use this when you want multiple outputs/results for a single value. That is, the results are not mutually exclusive. One condition being true does not affect the other conditions.
+In this example, we want to print all the results that a score could achieve.
+
+    if score > 50:
+        print("You passed")
+    if score >= 99:
+        print("You are a champion")
+    if score == SECRET_LUCKY_NUMBER:
+        print("You are a lucky winner.")
+
+So, as you design your selections, recognise what each pattern is for and how it applies to your situation. E.g. If you use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, you should know that is inefficient because those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
+
+
 ## Loops
 In most languages, there are multiple kinds of loops and you should choose the most appropriate kind.  
 The most common choice is:
 
-- Use *for loops* for definite iteration, like `for item in sequence...`
-- Use *while loops* for indefinite iteration, like `while condition...`
+- Use *for loops* for **definite** iteration, like `for item in sequence...`
+- Use *while loops* for **indefinite** iteration, like `while condition...`
 
 Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for!  
 Using a for loop and maintaining your own counter (e.g. iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you. In Python, if you need _both_ the index and the element, use `enumerate`.
