@@ -37,7 +37,7 @@ In this example, we don't want to print anything for the non-exceptional scores,
     if score > 90:
         print("That's exceptional!")
 
-Some beginning programmers use else for no reason, like the following example... That is 100% redundant and never of any value... Don't do it.
+Some beginning programmers use else for no reason, like the following example... This is redundant and never of any value... Don't do it.
 
     if score > 90:
         print("That's exceptional!")
@@ -55,8 +55,8 @@ Note that we do not need a second condition to handle the "fail" case, because i
         print("Fail")
 
 ### if, elif, else (or switch/case statement)
-Use this if you want to do something when the condition is true, and something different when it's false.  
-In this example, we want to print a result for the score no matter what its value is.
+Use this if you want to do something when the condition is true, and something different when it's false. This is the pattern that we use for menus as well - handle each menu option we know about and the trailing else handles the invalid option (see below).  
+In this example, we want to print one result for the score no matter what its value is.
 
     if score >= 90:
         print("Excellent")
@@ -66,13 +66,13 @@ In this example, we want to print a result for the score no matter what its valu
         print("Bad")
 
 ### if, elif with no trailing else
-Similar to the if with no else, use this when you want to handle multiple possible results, but there will not be result in all cases. The results are mutually exclusive, but you're happy to do nothing in some cases.
+Similar to the if with no else, use this when you want to handle multiple possible results, but there will not be a result in all cases. The results are mutually exclusive, but you're happy to do nothing in some cases.
 In this example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g. at graduation, they announce which graduates got a University medal, but they don't say which ones did not get a medal.)
 
     if score >= 90:
         print("You win a car!")
     elif score >= 80:
-        print("You win a horse :)")
+        print("You win a horse :)")  # but you do not win a car AND a horse
 
 ### if, if, if
 Use this when you want multiple outputs/results for a single value. That is, the results are not mutually exclusive. One condition being true does not affect the other conditions.
@@ -80,12 +80,13 @@ In this example, we want to print all the results that a score could achieve.
 
     if score > 50:
         print("You passed")
-    if score >= 99:
-        print("You are a champion")
-    if score == SECRET_LUCKY_NUMBER:
-        print("You are a lucky winner.")
+    if score >= 90:
+        print("You win a car!")
+    if score >= 80:
+        print("You win a horse :)")  # here, you can win BOTH a car and a horse
 
-So, as you design your selections, recognise what each pattern is for and how it applies to your situation. E.g. If you use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, you should know that is inefficient because those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
+So, as you design your selections, recognise what each pattern is for and how it applies to your situation.  
+E.g. You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, because you know that is inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
 
 
 ## Loops
