@@ -29,7 +29,7 @@ main should go at the top of your file, and someone reading your code for the fi
 When you need to make a decision in your program, you would usually use one of the following patterns.  
 (See loops below for when you need to repeatedly make decisions, e.g. for most error-checking.)
 
-The examples below will use situations where you want to print a *result* for a given *score*, where `scores` is a list of numbers (scores). Each situation could be stand-alone, or part of a loop, like `for score in scores:`
+The examples below will use situations where you want to print a *result* for a given *score*, where `score` is an integer. Each situation could be stand-alone, or part of a loop, like `for score in scores:`
 
 ### if with no else
 Use this if you want to do something when the condition is true, but do nothing when it's false.  
