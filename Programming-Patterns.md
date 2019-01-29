@@ -113,9 +113,34 @@ The most common choice is:
 - Use *while loops* for **indefinite** iteration, like `while condition...`
 
 Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for!  
-Using a for loop and maintaining your own counter (e.g. iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you. In Python, if you need _both_ the index and the element, use `enumerate`.
+Using a for loop and maintaining your own counter (e.g. iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you.  
+In Python, if you need _both_ the index and the element, use the function `enumerate`, e.g.
 
-## While loops
+```python
+names = ["Barry", "Tux", "Ada", "Maggie"]
+for i, name in enumerate(names):
+    print(i, " - ", name)
+```
+
+### For loops (definite iteration)
+For loops are mostly used when you want to do something with each item in a sequence.   
+In Python, if you want a sequence of numbers, this can be generated with `range`.
+One tip for variable naming... you will very often end up with loops of the form:
+
+    for singular in plural:
+        ...
+
+Example, `for dog in dogs`, `for number in numbers`, `for book in books`...
+If you find yourself writing something that doesn't match this, you might be in trouble.  
+Example:
+
+```python
+names = ["Barry", "Tux", "Ada", "Maggie"]
+for i in names:
+    print(i, " - ")  # WAIT, what's i? A name?!?
+```
+
+### While loops (indefinite iteration)
 Almost all while loops follow the same standard pattern (as below with menus and error checking).  
 Do not force the loop to be True the first time by setting a value for your loop condition variable, and do not use `while True`... unless this is really the best way to do it.
 
@@ -125,7 +150,7 @@ Do not force the loop to be True the first time by setting a value for your loop
         <same as the priming read again>
     <do next thing now that the loop is finished (condition was false)>
 
-Example - number guessing game:
+*Example - number guessing game*
 
 ```python
 SECRET = 6
@@ -136,8 +161,8 @@ while guess != SECRET:
 print("You got it!")
 ```
 
-## Menus
-Use the if/elif.../else pattern in Python (switch statements in other languages)
+### Menus
+Use the if/elif.../else pattern in Python (switch statements in other languages) inside a while loop that handles the quit option.
 
     display menu
     get choice
@@ -155,7 +180,7 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
         get choice
     <do final thing, if needed>
 
-## Error checking
+### Error checking
 
     <priming read - do something the loop depends on>
     while <condition based on something from above>:
@@ -173,7 +198,7 @@ while age < 0:
 print("You are {} years old".format(age))
 ```
 
-## Exception-based error checking
+### Exception-based error checking
 
 You can't have a 'normal' priming read since it might crash before you get to the condition, so you need your try/except _inside_ a loop that you control.
 
@@ -193,7 +218,7 @@ while not is_valid_input:
 print("Next year you will be", age + 1)
 ```
 
-## Function with error checking
+### Function with error checking
 
 Suppose you have a function that should do a task provided there are no errors, like adding a value to a collection if it's valid.  
 In this case, you can check for errors first, then do the task if there are no errors... instead of checking it's valid and doing the task if it's valid.   
@@ -236,7 +261,7 @@ Note that Python (and many languages) have neat shortcuts for filtering, e.g. us
 
 ## Working with Booleans
 
-You never need to compare to `True` or `False`. E.g. instead of:
+In most cases, where you are dealing with a condition or value and you care about whether it is true or false, then you never need to compare to `True` or `False`. E.g. instead of:
 
     if condition == True:
     ... or
