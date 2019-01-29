@@ -96,6 +96,10 @@ For installation methods other than using brew and pip, see the instructions on 
     brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer   
     pip3 install --upgrade pip  
     pip3 install Cython==0.26.1  
+    pip3 install kivy
+
+Note: Some people have found that the final command for installing kivy above needs to be replaced by:
+
     USE_OSX_FRAMEWORKS=0 pip3 install https://github.com/kivy/kivy/zipball/master  
 
 (The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. However, if you do get these errors, just use `pip3` anywhere it says `pip`.)
