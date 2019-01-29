@@ -1,5 +1,8 @@
 This page contains standard 'patterns' that you should get used to. When you need to perform one of these tasks, follow the standard pattern.
 
+For the most part, this guide is not language-specific, so many patterns are presented as *pseudocode*.  
+*Python 3* is used where actual code is provided... and Python is similar enough to pseudocode that this is usually suitable as a pattern.
+
 ## Main program structure
 For most programs, you will have a `main` function and a number of other functions.  
 Think of main as the whole program with the other functions as the tools that main uses, with the details abstracted away.  
@@ -35,56 +38,68 @@ The examples below will use situations where you want to print a *result* for a 
 Use this if you want to do something when the condition is true, but do nothing when it's false.  
 In this example, we don't want to print anything for the non-exceptional scores, so there's no else.
     
-    if score > 90:
-        print("That's exceptional!")
+```python
+if score > 90:
+    print("That's exceptional!")
+```
 
 Some beginning programmers use else for no reason, like the following example... This is redundant and never of any value... Don't do it.
 
-    if score > 90:
-        print("That's exceptional!")
-    else:
-        pass
+```python
+if score > 90:
+    print("That's exceptional!")
+else:
+    pass
+```
 
 ### if, else
 Use this if you want to do something when the condition is true, and something different when it's false.  
 In this example, we want to print a result for the score no matter what its value is.
 Note that we do not need a second condition to handle the "fail" case, because if the score is not >= 50 we already know that it must be < 50.
 
-    if score >= 50:
-        print("Pass")
-    else:
-        print("Fail")
+```python
+if score >= 50:
+    print("Pass")
+else:
+    print("Fail")
+```
 
 ### if, elif, else (or switch/case statement)
 Use this if you want to do something when the condition is true, and something different when it's false. This is the pattern that we use for menus as well - handle each menu option we know about and the trailing else handles the invalid option (see below).  
 In this example, we want to print one result for the score no matter what its value is.
 
-    if score >= 90:
-        print("Excellent")
-    elif score >= 50:
-        print("Passable")
-    else:
-        print("Bad")
+```python
+if score >= 90:
+    print("Excellent")
+elif score >= 50:
+    print("Passable")
+else:
+    print("Bad")
+```
 
 ### if, elif with no trailing else
 Similar to the if with no else, use this when you want to handle multiple possible results, but there will not be a result in all cases. The results are mutually exclusive, but you're happy to do nothing in some cases.
 In this example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g. at graduation, they announce which graduates got a University medal, but they don't say which ones did not get a medal.)
 
-    if score >= 90:
-        print("You win a car!")
-    elif score >= 80:
-        print("You win a horse :)")  # but you do not win a car AND a horse
+```python
+if score >= 90:
+    print("You win a car!")
+elif score >= 80:
+    print("You win a horse :)")  # but you do not win a car AND a horse
+```
 
 ### if, if, if
 Use this when you want multiple outputs/results for a single value. That is, the results are not mutually exclusive. One condition being true does not affect the other conditions.
 In this example, we want to print all the results that a score could achieve.
 
-    if score > 50:
-        print("You passed")
-    if score >= 90:
-        print("You win a car!")
-    if score >= 80:
-        print("You win a horse :)")  # here, you can win BOTH a car and a horse
+```python
+if score > 50:
+    print("You passed")
+if score >= 90:
+    print("You win a car!")
+if score >= 80:
+    print("You win a horse :)")  # here, you can win BOTH a car and a horse
+```
 
 So, as you design your selections, recognise what each pattern is for and how it applies to your situation.  
 E.g. You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, because you know that is inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
@@ -112,12 +127,14 @@ Do not force the loop to be True the first time by setting a value for your loop
 
 Example - number guessing game:
 
-    SECRET = 6
+```python
+SECRET = 6
+guess = int(input("? "))
+while guess != SECRET:
+    print("Guess again!")
     guess = int(input("? "))
-    while guess != SECRET:
-        print("Guess again!")
-        guess = int(input("? "))
-    print("You got it!")
+print("You got it!")
+```
 
 ## Menus
 Use the if/elif.../else pattern in Python (switch statements in other languages)
@@ -148,11 +165,13 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
 
 **Example:**
 
+```python
+age = int(input("Age: "))
+while age < 0:
+    print("Invalid age!")
     age = int(input("Age: "))
-    while age < 0:
-        print("Invalid age!")
-        age = int(input("Age: "))
-    print("You are {} years old".format(age))
+print("You are {} years old".format(age))
+```
 
 ## Exception-based error checking
 
@@ -160,17 +179,19 @@ You can't have a 'normal' priming read since it might crash before you get to th
 
 **Example:**
 
-    is_valid_input = False
-    while not is_valid_input:
-        try:
-            age = int(input("Age: "))
-            if age < 0:
-                print("Age must be >= 0")
-            else:
-                is_valid_input = True
-        except ValueError:
-            print("Invalid (not an integer)")
-    print("Next year you will be", age + 1)
+```python
+is_valid_input = False
+while not is_valid_input:
+    try:
+        age = int(input("Age: "))
+        if age < 0:
+            print("Age must be >= 0")
+        else:
+            is_valid_input = True
+    except ValueError:
+        print("Invalid (not an integer)")
+print("Next year you will be", age + 1)
+```
 
 ## Function with error checking
 
@@ -247,7 +268,7 @@ In general, there are 3 kinds of functions, those that are designed to:
 
 Very commonly, the structure in terms of parameters and return statements will look something like (example):
 
-    def main():
+    function main():
         data = get_input()
         result = process(data)
         display(result)
@@ -256,7 +277,7 @@ Very commonly, the structure in terms of parameters and return statements will l
 That is:   
 * input-getting functions don't take in parameters, but they do return what they get.  
 * data-processing functions do take in parameters (they do NOT get the input data from the user or other source), and they do return the results (they do NOT display/print/save the result)
-* output-producing functions do take in parameterr (what they are to display), but do not return anything
+* output-producing functions do take in parameter (what they are to display), but do not return anything
 
 ### Why is this important?
 Some good ways to understand function design include asking these questions about function *reuse*:  
