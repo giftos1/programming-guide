@@ -27,7 +27,7 @@ Download and install git from https://git-scm.com/download
 There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
 *Python:*  
-Download and install Python 3 ​from: https://www.python.org/downloads  
+Download and install Python 3 ​from: https://www.python.org/downloads/  
 Choose the option ​*Add python.exe to search path*​ when you install.
 
 *Kivy:*
