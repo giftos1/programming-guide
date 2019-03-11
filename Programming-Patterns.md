@@ -65,8 +65,8 @@ else:
 ```
 
 ### if, elif, else (or switch/case statement)
-Use this if you want to do something when the condition is true, and something different when it's false. This is the pattern that we use for menus as well - handle each menu option we know about and the trailing else handles the invalid option (see below).  
-In this example, we want to print one result for the score no matter what its value is.
+Use this if you want to handle all cases in some way - in our example, there will be an output printed for every possible score. This is the pattern that we use for menus as well - handle each menu option we know about and the trailing else handles the invalid option (see below).  
+In this example, we always want to print one result for the score no matter what its value is.
 
 ```python
 if score >= 90:
@@ -78,7 +78,7 @@ else:
 ```
 
 ### if, elif with no trailing else
-Similar to the if with no else, use this when you want to handle multiple possible results, but there will not be a result in all cases. The results are mutually exclusive, but you're happy to do nothing in some cases.
+Similar to the if with no else, use this when you want to handle multiple possible results, but there will be some cases where there is no result handled. The results are mutually exclusive, but you're happy to do nothing in some cases. If you use this pattern, ask yourself, "what cases/inputs do I NOT want to handle?"  
 In this example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g. at graduation, they announce which graduates got a University medal, but they don't say which ones did not get a medal.)
 
 ```python
