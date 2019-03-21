@@ -3,6 +3,29 @@ This page contains standard 'patterns' that you should get used to. When you nee
 For the most part, this guide is not language-specific, so many patterns are presented as *pseudocode*.  
 *Python 3* is used where actual code is provided... and Python is similar enough to pseudocode that this is usually suitable as a pattern.
 
+
+- [Main program structure](#main-program-structure)
+- [Selection](#selection)
+  - [if with no else](#if-with-no-else)
+  - [if, else](#if-else)
+  - [if, elif, else (or switch/case statement)](#if-elif-else-or-switchcase-statement)
+  - [if, elif with no trailing else](#if-elif-with-no-trailing-else)
+  - [if, if, if](#if-if-if)
+- [Loops](#loops)
+  - [For loops (definite iteration)](#for-loops-definite-iteration)
+  - [While loops (indefinite iteration)](#while-loops-indefinite-iteration)
+  - [Menus](#menus)
+  - [Error checking](#error-checking)
+  - [Exception-based error checking](#exception-based-error-checking)
+  - [Function with error checking](#function-with-error-checking)
+  - [Finding](#finding)
+  - [Filtering](#filtering)
+- [Working with Booleans](#working-with-booleans)
+- [Function design](#function-design)
+  - [Why is this important?](#why-is-this-important)
+- [Data storage](#data-storage)
+- [Never](#never)
+
 ## Main program structure
 For most programs, you will have a `main` function and a number of other functions.  
 Think of main as the whole program with the other functions as the tools that main uses, with the details abstracted away.  
@@ -234,7 +257,7 @@ Example structure:
             return
         do task (knowing we don't have any of the above errors)
 
-## Finding
+### Finding
 
     function find(needle)
         for each item in items
@@ -244,7 +267,7 @@ Example structure:
 
 (note no need for else or continue, it will move to the next item)
 
-## Filtering
+### Filtering
 
 
     filtered_items = new list
