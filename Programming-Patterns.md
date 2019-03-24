@@ -29,7 +29,8 @@ For the most part, this guide is not language-specific, so many patterns are pre
 ## Main program structure
 For most programs, you will have a `main` function and a number of other functions.  
 Think of main as the whole program with the other functions as the tools that main uses, with the details abstracted away.  
-main should go at the top of your file, and someone reading your code for the first time should be able to look at main and understand what the program does... that is, main should "look like" the whole program. Example structure:
+main should go at the top of your file, and someone reading your code for the first time should be able to look at main and understand what the program does... that is, main should "look like" the whole program.  
+In the following example pseudocode, the specifics don't matter, but you can see the program structure and how the functions contain the detail:
 
     """ module-level docstring """
     import statements
@@ -37,17 +38,17 @@ main should go at the top of your file, and someone reading your code for the fi
 
     function main()
         opening statement
-        do_step1()
-        result = do_step2()
+        result = do_step1()
         do_step2(result)
         closing statement
     
-    function step1()
-        ...
-    
-    function step2(parameter)
+    function do_step1()
         ...
         return result
+    
+    function do_step2(parameter)
+        ...
+
 
     main()
 
