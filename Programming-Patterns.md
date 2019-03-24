@@ -11,6 +11,7 @@ For the most part, this guide is not language-specific, so many patterns are pre
   - [if, elif, else (or switch/case statement)](#if-elif-else-or-switchcase-statement)
   - [if, elif with no trailing else](#if-elif-with-no-trailing-else)
   - [if, if, if](#if-if-if)
+  - [Boundary conditions](#Boundary conditions)
 - [Loops](#loops)
   - [For loops (definite iteration)](#for-loops-definite-iteration)
   - [While loops (indefinite iteration)](#while-loops-indefinite-iteration)
@@ -63,14 +64,14 @@ Use this if you want to do something when the condition is true, but do nothing 
 In this example, we don't want to print anything for the non-exceptional scores, so there's no else.
     
 ```python
-if score > 90:
+if score >= 90:
     print("That's exceptional!")
 ```
 
 Some beginning programmers use else for no reason, like the following example... This is redundant and never of any value... Don't do it.
 
 ```python
-if score > 90:
+if score >= 90:
     print("That's exceptional!")
 else:
     pass
@@ -117,7 +118,7 @@ Use this when you want multiple outputs/results for a single value. That is, the
 In this example, we want to print all the results that a score could achieve.
 
 ```python
-if score > 50:
+if score >= 50:
     print("You passed")
 if score >= 90:
     print("You win a car!")
@@ -128,6 +129,22 @@ if score >= 80:
 So, as you design your selections, recognise what each pattern is for and how it applies to your situation.  
 E.g. You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, because you know that is inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
 
+### Boundary conditions
+This applies to both selection and repetition so it's here between them.  
+Some of the most common programming errors happen with boundary conditions and so these should usually always be tested explicitly. In the examples above, 50 is a pass. But if we get our boundary condition wrong, we might have something like:
+
+```python
+if score > 50:
+    print("You passed")
+# or
+if score > 49:
+    print("You passed")
+```
+In the first case (`score > 50`), this works for all values _greater than_ 50, but it would make 50 a fail, not a pass as it should be. If you test your code using the boundaries as input values, you will see that 50 is not a pass. If you have a program with 7 boundaries (e.g. N, P, C, D, HD, too high, too low), you'll need to test all 7 plus some others.  
+In the second case, this works for now, but we have 2 problems: the *problem domain* specifies that 50 is a pass, so we should use the value `50`, not change it to something we hope works - there's a chance we might make a mistake; secondly, if we change score to be a `float` instead of an `int` we now have failing values like `49.1` that will result in pass when they should not.  
+
+Did you catch that? Always use the values and names in the problem domain - e.g. the problem description says that a _score_ of _50 or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
+It's much harder to make a mistake when you're following what the problem description says... Just check those boundaries when you write them (> 50 or >= 50 or < 50 or <= 50 or == 50...?) and test them!
 
 ## Loops
 In most languages, there are multiple kinds of loops and you should choose the most appropriate kind.  
@@ -138,18 +155,11 @@ The most common choice is:
 
 Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for!  
 Using a for loop and maintaining your own counter (e.g. iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you.  
-In Python, if you need _both_ the index and the element, use the function `enumerate`, e.g.
-
-```python
-names = ["Barry", "Tux", "Ada", "Maggie"]
-for i, name in enumerate(names):
-    print(i, " - ", name)
-```
 
 ### For loops (definite iteration)
 For loops are mostly used when you want to do something with each item in a sequence.   
 In Python, if you want a sequence of numbers, this can be generated with `range`.
-One tip for variable naming... you will very often end up with loops of the form:
+One tip for variable naming... you will _very often_ end up with loops of the form:
 
     for singular in plural:
         ...
@@ -162,6 +172,14 @@ Example:
 names = ["Barry", "Tux", "Ada", "Maggie"]
 for i in names:
     print(i, " - ")  # WAIT, what's i? A name?!?
+```
+
+In Python, if you need _both_ the index and the element, use the function `enumerate`, e.g.
+
+```python
+names = ["Barry", "Tux", "Ada", "Maggie"]
+for i, name in enumerate(names):
+    print(i, " - ", name)
 ```
 
 ### While loops (indefinite iteration)
@@ -324,7 +342,7 @@ Very commonly, the structure in terms of parameters and return statements will l
 
 (This is a simplification to make the point about reusability, not a rule that never changes.)  
 That is:   
-* input-getting functions don't take in parameters, but they do return what they get.  
+* input-getting functions don't always take in parameters, but they do return what they get.  
 * data-processing functions do take in parameters (they do NOT get the input data from the user or other source), and they do return the results (they do NOT display/print/save the result)
 * output-producing functions do take in parameter (what they are to display), but do not return anything
 
@@ -332,8 +350,8 @@ That is:
 Some good ways to understand function design include asking these questions about function *reuse*:  
 * What if we wanted to rewrite the program's interface in French or Farsi? We should not have to change the processing function, because it should not do any user interface things (input or output on the screen).  
 * What if we wanted to get our input from a file instead of the user? We should not have to change the processing function because it should not get any user input. A well-designed function *can* be used with input either from the user or a file (or anywhere), because it takes in the input as parameters.
-* Same as above for if we wanted to write our output to a file instead of display it on the screen... the processing function shouldn't care where the data (input parameters) comes from, or where the results (return values) go, since that's not it's job.
-* Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using the `assert` statement, or `doctest` module). You really can't easily "test" functions that get user input and print results in any automated way.
+* Same as above for if we wanted to write the output to a file instead of display it on the screen... the processing function shouldn't care where the data (input parameters) comes from, or where the results (return values) go, since that's not its job.
+* Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using Python's `assert` statement or `doctest` module). You really can't easily "test" functions in any automated way if they get user input or print results.
 
 ## Data storage
 Always store data in the best, most correct, format. E.g. if you read a *price* from console or file input, it will initially be a `string`, but you should convert it and store it as a `float`. If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it that way... leaving the variable as a float.  
