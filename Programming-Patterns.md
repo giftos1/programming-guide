@@ -11,7 +11,7 @@ For the most part, this guide is not language-specific, so many patterns are pre
   - [if, elif, else (or switch/case statement)](#if-elif-else-or-switchcase-statement)
   - [if, elif with no trailing else](#if-elif-with-no-trailing-else)
   - [if, if, if](#if-if-if)
-  - [Boundary conditions](#Boundary conditions)
+  - [Boundary conditions](#boundary-conditions)
 - [Loops](#loops)
   - [For loops (definite iteration)](#for-loops-definite-iteration)
   - [While loops (indefinite iteration)](#while-loops-indefinite-iteration)
