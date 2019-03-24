@@ -336,11 +336,13 @@ Some good ways to understand function design include asking these questions abou
 * Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using the `assert` statement, or `doctest` module). You really can't easily "test" functions that get user input and print results in any automated way.
 
 ## Data storage
-Always store data in the best, most correct, format. E.g. if you read a *price* from a file, it will be a string, but you should store it as a float. If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it... leaving the variable as a float.
+Always store data in the best, most correct, format. E.g. if you read a *price* from console or file input, it will initially be a `string`, but you should convert it and store it as a `float`. If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it that way... leaving the variable as a float.  
 
-In general, don't store derivable data. E.g. don't store *age* if you already have a *date of birth* (DOB).  
-Doing so can lead to inconsistency, e.g. your age doesn't get updated when "date - DOB" results in a different age. Just calculate the age when you need it and it can't be wrong.  
-This is a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
+(Another example) If you're asking the user to make a yes/no choice, they might click a button or type "yes", but then you would convert this and store it as a `Boolean` because that's the most appropriate type to store a yes/no (True/False) state.
+
+In general, don't store derivable data. This is a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
+E.g. don't store *age* if you already have a *date of birth* (DOB). Doing so can lead to inconsistency, e.g. your age might not get updated when the date changes. Just calculate the age when you need it and it can't be wrong.  
+
 
 ## Never
 Here are a few things you should _never_ do... You can consider these to be "anti-patterns".   
