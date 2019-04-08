@@ -1,6 +1,15 @@
-# IT@JCU - Projects for Programming Practice
+# Projects for Programming Practice
 
 Here is a collection of projects for you to practise your programming with, arranged by topic.
+
+- [Selection](#selection)
+- [Loops](#loops)
+- [Functions](#functions)
+- [File I/O](#file-io)
+- [Lists and Dictionaries](#lists-and-dictionaries)
+- [Classes](#classes)
+- [Recursion](#recursion)
+- [More Study Ideas](#more-study-ideas)
 
 ## Selection
 
@@ -127,6 +136,22 @@ Now, for numbers up to NUMBER_OF_PRIMES squared, you just need to see if any of 
     5. clothing item
     6. etc. (you think of more)
 2. Take some of the earlier questions in the subject and in this projects list and convert them to use objects. Anywhere that you might have used multiple data items that were related can be combined (encapsulated) into a class.
+3. One of the "Do this now" activities is:
+
+Write a list comprehension to produce a new list containing only the products that are on sale (True means it's on sale)
+
+```python3
+products = [["Phone", 340, False], ["PC", 1420.95, True], ["Plant", 24.5, True], ...]
+
+on_sale_products = ?
+```
+Take this and modify it to use a `Product` class instead of the list.  
+Write a program that works with a list of `Product` objects that has some/all of the following functionality:
+- Read and write products from/to a file
+- Users can list all products 
+- Users can add new products
+- Users can put products on sale... e.g. you might write a method like `put_on_sale(percentage)`
+- Users can list only on-sale products (similar to the list comprehension that we started out with but now we're using classes)
 
 ## Recursion
 
@@ -152,4 +177,3 @@ Remember to analyse and design this problem first. Think about the base and recu
 6. For some of the existing (or new) questions, write pseudocode instead of Python  
 
 7. Write a program to determine your expected grade in the subject based on your current and expected marks – either from user input or from a file.
-
