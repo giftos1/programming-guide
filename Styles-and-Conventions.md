@@ -7,6 +7,7 @@ Here are some useful references for Python style conventions, as expected in CP1
 * Here's an example demonstrating PEP 257 docstring styles http://dolphm.com/pep257-good-python-docstrings-by-example
 
 # Commenting
+As always, we follow the [official Python styles for comments](https://www.python.org/dev/peps/pep-0008/#id30).
 Comments are to help humans read your code - these should be simple and helpful, written for someone about your own level of understanding. Don't include comments if they don't help.
 
 ## Do
