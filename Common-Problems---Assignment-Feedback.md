@@ -1,15 +1,174 @@
   
 The following is a collection of actual comments to students who have completed CP1404 assignments similar to yours and had problems. Reading these might give you some tips about mistakes you've made in your own assignment work. There's nothing new here - it's all based on the assignment requirements and expectations from the core teaching in the subject.    
 Don't get bogged down with specifics here - some comments will be totally meaningless or irrelevant to your assignment.  
+
+# Assignment 1 - Console Program
+
+
+## Correctness
+Incorrectly tries to load temp.csv instead of books.csv - doesn't run  
+Incorrect display of * for required/completed  
+Incorrectly starts book list at 1  
+Doesn't seem to add new books (not displayed); incorrectly writes to the file.  
+Writing/saving the file should only happen once, at the end.  
+Completes wrong book number  
+What is 'The list menu must be entered first'? This should not occur.  
+Doesn't add new books as required.  
+Doesn't display totals.  
+Doesn't display # books loaded at start.  
+Doesn't show "No books left to read."   
+Doesn't sort books.  
+Sorting doesn't consider number of pages.  
+Sorting pages doesn't work because pages has been stored as a string.  
+When no books are required, marking (M) should not display list.  
+   
+## Error checking  
+Doesn't check empty strings  
+Doesn't handle invalid book numbers - crashes with IndexError.  
+Doesn't handle upper and lower case menu choices.  
+Incorrect handling of invalid menu choice  
+Allows pages below 1.  
+Allows negative pages because you're using if not a loop.  
+   
+## Similarity to sample output  
+Several differences including (most important), book display  
+Incorrect output when entering wrong book number.  
+book list should start at 1.  
+Doesn't display new book (details) added.  
+   
+## Identifier naming  
+Function names should be imperative verb phrases.  
+Inconsistent use of case.  
+You have a variable with the same name as the function it's in!  
+Constants should be in ALL_CAPS.  
+Good job with constants for indices like BOOK_TITLE, but they don't sound like indices.  
+completed_books sounds like a plural and therefore a collection. Use "number_of..." or similar.  
+"for title in book_list" should just be "for book in books" (it's not just a title).  
+"verify_author_or_title" doesn't verify/check, it "gets".  
+"books" is plural; don't use it for a single book.  
+add_new_book doesn't add, it gets.  
+Similar function names need differentiation.  
+learned_books books_to_learn sounds like it stores books, not a number.  
+output_to_file should just be like save_books.  
+get_file_contents should be more like load_books - use domain language.  
+Names could be closer to the problem domain. E.g. the problem description doesn't use the word "unread".  
+Why "print_books_to_file" then write a comment "save books..."? Just call the function "save_books" = self-documenting code :)  
+   
+## Use of code constructs  
+The assignment requires you to load the books once and store them, which you don't do.  
+"else: pass" is always redundant.  
+line 59 does nothing  
+Don't use close() inside with.  
+Why use else with your try/except? Put this with your if, not your try. (Inconsistent)  
+Put imports at the top, not in functions.  
+Menu while condition is invalid (always True), so you need an if again... Please revisit the teaching on this.  
+Don't use while True for a menu. Follow our pattern.  
+Program should start with the main function.  
+Your menu has an extraneous while loop with repeated menu choices. Please follow our pattern.  
+Just upper()/lower() the input so you don't need to check for case each time.  
+Just upper()/lower() the input so you don't need to do it in each menu if.  
+Don't duplicate code like prompting for the menu choice in each option if.  
+Duplicated code for printing required/completed book… do you see there's only 1 difference? Make that a variable and reuse the same print statement. (DRY principle)  
+DRY principle: you have 2 for loops when you only need 1 for printing books.  
+Don't convert inputs (strings) to strings.  
+You should store data in its correct format, so year should be stored as an int not a string.  
+Don't use a loop to count books, just the len() function.  
+Don't use "in" to compare things you expect are the same or different; just use "==".  
+Don't use "is" to compare things unless you specially want reference equality, not value equality.  
+Close files as soon as you've finished with them.   
+Separate load/save file handling.  
+.lower() used multiple times when you need it once/twice.  
+Don't use global variables.  
+Don't use else with while loops.  
+Don't iterate through indices unless you need the index - just loop through the elements.  
+Oh my, you've used recursion to handle the menu instead of just looping.  
+Don't use a loop where the condition doesn't control it.  
+Don't store book indices - these are just the existing list indices.  
+Don't compare Booleans to True/False.  
+Needing a comment like "# while the book name is blank" implies you should have just use more readable code (while name != "")  
+Where have your learned to use exit()?  
+Why use "while True" to read file? Just use "for line in file".  
+while True for basic error checking (e.g. blank book name) is unhelpful.  
+You already have a while (Boolean) loop for exception handling of year, so you don't need the nested while loop inside it.  
+The books filename and c/r should be constants.  
+c/r should be constants. See how many times you use them?  
+When you have a constant, you need to use it everywhere you can.  
+Sorting can be much simpler with itemgetter as suggested.  
+Sorting doesn't consider title.  
+Only sort the list when you need to.  
+Consider using enumerate to simplify your loops where you need both the index and the element.  
+Don't loop over index in range(length) if you don't need the index.  
+Instead of using len() to find empty strings, just compare using == "".  
+   
+## Use of functions  
+Because you don't store the books in a list, you don't pass this list. Please make sure you learn this fundamental principle.  
+Because you have global variables, you don't pass them to functions. Please make sure you learn this fundamental principle.  
+The functions should be passed the list of books.  
+You were asked to pass a list of lists, not a list of strings.  
+Loading books should be done in a separate function that returns a list of lists (finished processing the file data).  
+The loading books function should return a list of lists (finished processing the file data), not a list of strings.  
+The load books function should do the whole job including open/close file, rather than this being outside it.  
+complete_a_book should do the whole job including getting input. This is not very reusable.  
+Adding a book should be a separate function.  
+The add_book function should do the whole job, not just part of it.  
+Completing a book should be a function... see how much of main it takes up?  
+You should have functions for list, add, complete… see how much of main they take up?  
+save_books should be a function.  
+get_title/author should be combined - see how similar they are?  
+The load books function should not print (SRP).  
+Main menu options should each be done with a complete function - why split them up like this?  
+Missing most expected functions.  
+Much of this is confused and messy. Your functions end up reducing readability instead of improving it.  
+Functions like check_valid_year do only part of the job - should be complete or only do one thing.  
+Load/save needing the file object make them less reusable.  
+Don't pass derivable things. E.g. In write_file, you pass book_count, then use len(book_list) anyway.  
+menu() should be in main, not a separate function. main should look like the whole program.  
+print and sort for adding book should be part of the add function, not in main.  
+main has too much code in it that should be in the functions.  
+Don't return mutable parameters (books); the variable will already be changed.  
+   
+## Formatting  
+Lining up variables/values creates a maintenance burden. Just use the standard formatting.  
+   
+## Commenting  
+Your function comments are not docstrings.  
+Top comment is not a module docstring  
+No module docstring  
+Top comments should explain the program's basic purpose  
+No function docstrings.  
+This code could benefit from some inline/block comments in places where the code is less than obvious.  
+Inline comments should not extend off to the right too far - put them above the line if they do.  
+Far too many noisy comments. Don't do this... who wants/needs to read this?  
+Remove old code; don't leave it in comments.  
+Use the imperative voice for comments (e.g. "call" instead of "calls").  
+Personal commentary like "# Needed something different for the book year" should be avoided.  
+Comments like "# menu loop" are noise - don't help anyone  since the code is obvious.  
+"" would be unnecessary if the variable name was more meaningful.  
+   
+## Version control  
+Incorrect submission - not a zip file containing your repo.  
+Incorrect submission; zip file must be of your project (which will include your .git folder), not your repo downloaded from GitHub.  
+GitHub commits show use of "Upload file" instead of what we taught you. Please learn this important skill now.  
+Look at our examples for good messages. Some of yours don't say what they really do or are not voiced properly.  
+"Add files via upload" means you've used the website interface to upload files, instead of how we've taught you (PyCharm) with good messages. Please make sure you learn this from the prac and lecture notes.  
+These 'milestones' are probably a bit small (too many commits), but that's better than the other way around.  
+Avoid using the same message for multiple commits - explain the difference.  
+Use the imperative voice for commit messages.  
+   
+## General comments   
+This assignment shows that you were working on just trying to get it to work, instead of following the best practices and using the skills we have taught you in class. It seems you did not really read the assignment properly. The assignment details highlight very important things that you are to take note of and do (such as reading the file once and storing the data in a list of lists that you pass to functions; and submitting a zip file).   
+Please learn from this that you need to follow the instructions properly. Let's make assignment 2 much different, OK  
+
   
-  
-# Project reflection
+# Assignment 2 - GUI & Classes
+
+## Project reflection
 Mostly good, just not much detail.  
 Needs more about "process", less about results/difficulties.  
 Some sections have minimal detail and insight.  
 Some answers are too generic - e.g. obstacles. Be a bit more specific in this kind of reflection.  
    
-# Version control
+## Version control
 Use the imperative voice (e.g. "Add X" not "Added X").  
 Messages could be improved.  
 Commits don't show incremental development that starts with classes + tests.  
@@ -21,24 +180,24 @@ Inconsistent messages.
 Mismatched messages (e.g. "Add docstring" is not "clear clutter").  
 Don't use quotes for your "messages".  
    
-# Console program
+## Console program
 new_book.is_completed = False should be redundant since False is the default/current value.  
 Creating a new book just to select and change an existing book is unnecessary.  
    
-# GUI layout
+## GUI layout
 Can't press Tab to switch between input fields.  
 Books don't start in the sort order the GUI shows.  
 Colour changing is inconsistent, can't change back.  
 Using "Is_Complete" in GUI is not ideal. Don't change the view to match the underlying code.  
 Doesn't show all book details.  
    
-# Error Handling
+## Error Handling
 try/except not used for number of pages checking, so crashes when you enter a non-number number of pages.  
 Allows negative or 0 number of pages.  
 Doesn't check for valid category.  
 Error messages (order) don't match requirements.  
    
-# Correctness
+## Correctness
 Doesn't update status label when book button clicked.  
 The program should not change the user's input.  
 You should not be limiting text entry in the pages field - that wasn't a requirement and prevents you doing what is a requirement: showing an error message when the user enters text.  
@@ -55,7 +214,7 @@ Sorting by number of pages is alphanumeric (string) instead of numeric (int).
 Title should be an option for sorting  
 Saves before closing the program.  
    
-# Identifier naming
+## Identifier naming
 Method names should usually be verb phrases.  
 books.books is not helpful - rename the BookCollection object so it doesn't sound like a normal list.  
 In press_button(), title is actually the Button widget, not the title.  
@@ -72,7 +231,7 @@ change_state is too generic (probably taken from spinner demo when it actually c
 sort_bookcollection would be better as sort or sort_books (we know it's a BookCollection by its class).  
 completed doesn't sound enough like a Boolean (use is_completed).  
    
-# Code constructs
+## Code constructs
 in Book, number of pages should be an int not a string.  
 in Book, is_completed should be a Boolean not a string.  
 Unnecessary duplication in Book.str method (DRY principle).  
@@ -116,7 +275,7 @@ The file should be opened and read only once.
 Technique for getting book from button is harder than it needs to be.  
    
    
-# Functions
+## Functions
 required_count_update takes too much and does too little. It should call the methods to get what you passed in. See how cumbersome this call looks? Hide complexity in the methods, not in the parameters.  
 on_start could get its initial sorting from the model (main) not the view (kv).  
 Good reuse of handle_clear in add_book  
@@ -134,7 +293,7 @@ super().__init__() should be the first line of the function.
 Some functions could be combined (e.g. update_*) or replaced with a StringProperty for the status label.  
 Functionality in BookCollection (e.g. error checking) should be  in main.  
    
-# Classes and methods
+## Classes and methods
 sort_books should not return anything (currently it returns None).  
 mark_completed() should not return anything - just mark completed.  
 save _books should not print anything - no method should.  
@@ -155,7 +314,7 @@ You have methods for counting the number of completed/required books, but you do
 mark_required should not take a parameter.  
 Importing from console program makes classes not as reusable/modular.  
    
-# Commenting
+## Commenting
 Don’t write "developer train of thought" kind of comments - just say what the functions will do, not your code choices.  
 "List comprehension for finding ..." should just be "Count ..." - just say what the function will do, not your code choices, which might change later (but the docstring shouldn't have to).  
 Comments like "#Boolean to mark book as not required" are just for your learning, not helpful for readers.  
@@ -173,7 +332,7 @@ Comments in classes should only be about classes, not an app that might use them
 Inconsistent wording (use imperative voice; keep it simple.)  
 Lined-up block comments are a maintenance burden. Just put them after the line, or above it.  
    
-# Formatting
+## Formatting
 Lining up variables/values creates a maintenance burden. Just use the standard formatting.  
    
 
