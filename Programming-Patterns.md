@@ -328,6 +328,8 @@ You can just use:
 
 ## Function design
 
+The most important aspect of function design is the **Single Responsibility Principle (SRP)**, which means that functions should "do one thing". What "one thing" means depends on the context, but a single function should be an abstraction of a single task.   
+
 In general, there are 3 kinds of functions, those that are designed to:  
 * get input (from the user or another source)
 * process data
