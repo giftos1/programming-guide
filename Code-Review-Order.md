@@ -23,9 +23,8 @@ pagave-puana        mentions:  Jack-Walsh
 Prac 6:
 michaelbradymahoney mentions:  Jack-Walsh
 MdouglasJCU         mentions:  pagave-puana
-SarahWiese          mentions:  michaelbradymahoney
 DaniRyland-Lawson   mentions:  MdouglasJCU
-SeanVSheep          mentions:  SarahWiese
+SeanVSheep          mentions:  michaelbradymahoney
 aubiene             mentions:  DaniRyland-Lawson
 kiara-williams      mentions:  SeanVSheep
 GeoffreyDavidReid   mentions:  aubiene
@@ -36,12 +35,39 @@ Jack-Walsh          mentions:  ZachKeeffe
 pagave-puana        mentions:  drowlands
 
 Prac 7:
-michaelbradymahoney mentions:  drowlands
-MdouglasJCU         mentions:  Jack-Walsh
-SarahWiese          mentions:  pagave-puana
+michaelbradymahoney mentions:  pagave-puana
+MdouglasJCU         mentions:  michaelbradymahoney
+DaniRyland-Lawson   mentions:  MdouglasJCU
+SeanVSheep          mentions:  DaniRyland-Lawson
+aubiene             mentions:  SeanVSheep
+kiara-williams      mentions:  aubiene
+GeoffreyDavidReid   mentions:  kiara-williams
+Chris-Barty-JCU     mentions:  GeoffreyDavidReid
+ZachKeeffe          mentions:  Chris-Barty-JCU
+drowlands           mentions:  ZachKeeffe
+Jack-Walsh          mentions:  drowlands
+pagave-puana        mentions:  Jack-Walsh
+
+Prac 8:
+michaelbradymahoney mentions:  Jack-Walsh
+MdouglasJCU         mentions:  pagave-puana
 DaniRyland-Lawson   mentions:  michaelbradymahoney
 SeanVSheep          mentions:  MdouglasJCU
-aubiene             mentions:  SarahWiese
+aubiene             mentions:  DaniRyland-Lawson
+kiara-williams      mentions:  SeanVSheep
+GeoffreyDavidReid   mentions:  aubiene
+Chris-Barty-JCU     mentions:  kiara-williams
+ZachKeeffe          mentions:  GeoffreyDavidReid
+drowlands           mentions:  Chris-Barty-JCU
+Jack-Walsh          mentions:  ZachKeeffe
+pagave-puana        mentions:  drowlands
+
+Prac 9:
+michaelbradymahoney mentions:  drowlands
+MdouglasJCU         mentions:  Jack-Walsh
+DaniRyland-Lawson   mentions:  pagave-puana
+SeanVSheep          mentions:  michaelbradymahoney
+aubiene             mentions:  MdouglasJCU
 kiara-williams      mentions:  DaniRyland-Lawson
 GeoffreyDavidReid   mentions:  SeanVSheep
 Chris-Barty-JCU     mentions:  aubiene
@@ -50,49 +76,18 @@ drowlands           mentions:  GeoffreyDavidReid
 Jack-Walsh          mentions:  Chris-Barty-JCU
 pagave-puana        mentions:  ZachKeeffe
 
-Prac 8:
+Prac 10:
 michaelbradymahoney mentions:  ZachKeeffe
 MdouglasJCU         mentions:  drowlands
-SarahWiese          mentions:  Jack-Walsh
-DaniRyland-Lawson   mentions:  pagave-puana
-SeanVSheep          mentions:  michaelbradymahoney
-aubiene             mentions:  MdouglasJCU
-kiara-williams      mentions:  SarahWiese
+DaniRyland-Lawson   mentions:  Jack-Walsh
+SeanVSheep          mentions:  pagave-puana
+aubiene             mentions:  michaelbradymahoney
+kiara-williams      mentions:  MdouglasJCU
 GeoffreyDavidReid   mentions:  DaniRyland-Lawson
 Chris-Barty-JCU     mentions:  SeanVSheep
 ZachKeeffe          mentions:  aubiene
 drowlands           mentions:  kiara-williams
 Jack-Walsh          mentions:  GeoffreyDavidReid
 pagave-puana        mentions:  Chris-Barty-JCU
-
-Prac 9:
-michaelbradymahoney mentions:  Chris-Barty-JCU
-MdouglasJCU         mentions:  ZachKeeffe
-SarahWiese          mentions:  drowlands
-DaniRyland-Lawson   mentions:  Jack-Walsh
-SeanVSheep          mentions:  pagave-puana
-aubiene             mentions:  michaelbradymahoney
-kiara-williams      mentions:  MdouglasJCU
-GeoffreyDavidReid   mentions:  SarahWiese
-Chris-Barty-JCU     mentions:  DaniRyland-Lawson
-ZachKeeffe          mentions:  SeanVSheep
-drowlands           mentions:  aubiene
-Jack-Walsh          mentions:  kiara-williams
-pagave-puana        mentions:  GeoffreyDavidReid
-
-Prac 10:
-michaelbradymahoney mentions:  GeoffreyDavidReid
-MdouglasJCU         mentions:  Chris-Barty-JCU
-SarahWiese          mentions:  ZachKeeffe
-DaniRyland-Lawson   mentions:  drowlands
-SeanVSheep          mentions:  Jack-Walsh
-aubiene             mentions:  pagave-puana
-kiara-williams      mentions:  michaelbradymahoney
-GeoffreyDavidReid   mentions:  MdouglasJCU
-Chris-Barty-JCU     mentions:  SarahWiese
-ZachKeeffe          mentions:  DaniRyland-Lawson
-drowlands           mentions:  SeanVSheep
-Jack-Walsh          mentions:  aubiene
-pagave-puana        mentions:  kiara-williams
 
 ```
