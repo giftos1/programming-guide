@@ -1,7 +1,7 @@
-Software Setup
-==============
+# Software Setup
 
-To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following.
+
+To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following for CP1404 (CP1401 students only need Python and PyCharm):
 * Python
 * PyCharm
 * Kivy
@@ -22,15 +22,15 @@ Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http
 
 # Windows
 
-*Git:*  
+## Git:
 Download and install git from https://git-scm.com/download  
 There are a number of options for things like git-bash and what console you want to use... The defaults should be fine.
 
-*Python:*  
+## Python:
 Download and install Python 3 ​from: https://www.python.org/downloads/  
 Choose the option ​*Add python.exe to search path*​ when you install.
 
-*Kivy:*
+## Kivy:
 See https://kivy.org/docs/installation/installation-windows.html which are summarised/expanded below:  
 
 The Windows instructions require you to type commands in a *Command Prompt* window.  
@@ -57,8 +57,8 @@ If that works, then enter the following commands.
 Now you can run PyCharm, select your interpreter (the Python you just installed), and you should be able to run Python programs.  
 See below
 
-*PyCharm:*
-After you have installed Python...  
+## PyCharm:
+*After* you have installed Python...  
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
 * Download and install the *Professional* version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
@@ -79,19 +79,19 @@ The instructions here are for using commands you type in at the terminal.
 *Please note* that some of these commands, like the first one, are long lines that should be copied and pasted in one go, even though the page here might show them word-wrapped.  
 For installation methods other than using brew and pip, see the instructions on appropriate websites.
 
-*Homebrew:*  
+## Homebrew:
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-*Python 3:*  
+## Python 3:
 
     brew install python3
 
-*Git:*  
+## Git:
 
     brew install git
 
-*Kivy:*  
+## Kivy:
 
     brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer   
     pip3 install --upgrade pip  
@@ -104,8 +104,8 @@ Note: Some people have found that the final command for installing kivy above ne
 
 (The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. However, if you do get these errors, just use `pip3` anywhere it says `pip`.)
 
-*PyCharm:*  
-After you have installed Python...  
+## PyCharm:
+*After* you have installed Python...  
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
 * Download and install the *Professional* version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
