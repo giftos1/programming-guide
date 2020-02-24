@@ -273,6 +273,7 @@ Note how similar pseudocode for lists/arrays looks to real code – that's fine.
 
 
 ### Python
+```python
     def main():
         name = input("Enter your name (blank to quit): ")
         while name != "":
@@ -287,7 +288,7 @@ Note how similar pseudocode for lists/arrays looks to real code – that's fine.
         return age >= 18
 
     main()
-
+```
 
 Some things to note:
 
