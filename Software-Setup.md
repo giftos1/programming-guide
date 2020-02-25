@@ -9,6 +9,10 @@ To get started, you only _need_ **Python 3**, but to get _everything_ setup and 
 
 Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything. Things change, and sometimes you'll find a different/better way is needed. If so, please contact me and let me know what needs updating.
 
+# NOTE: 
+As of February 2019, it seems Kivy is not compatible with Python 3.8. Please choose a version of Python 3.7 if you are doing CP1404 and need Kivy.  
+https://github.com/kivy/kivy/issues/6563
+
 ## GitHub:
 
 If you do not have one already, create a GitHub account.  
