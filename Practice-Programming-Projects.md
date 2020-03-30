@@ -54,7 +54,7 @@ Print a "progress bar" based on a percentage (number). E.g. 50% would print some
 
 Write a program that uses functions to do the following:
 
-* Use a menu to present the user with options, as shown in the output below. Make a function for your menu that displays the menu text, gets the user's choice and converts it to uppercase (and returns it).
+* Use a menu to present the user with options, as shown in the output below.
 * Calculating a grade is based on the user's score and works like: <50 = N, 50-64 = P, 65-74 = C, 75-84 = D, >= 85 = HD.   
 (Floats should be handled, e.g. 74.95 is a C.)  
 Use a function that only calculates the grade, but does not display it.   
