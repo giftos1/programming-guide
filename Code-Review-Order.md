@@ -1,4 +1,5 @@
-For CP1404 External students only:  
+For CP1404 External students only.  
+Updated 09/04/2020
 
 CP1404 External Code Reviews
 ----------------------------
@@ -47,9 +48,11 @@ AlexanderDoherty99 mentions:  ZachKeeffe
 Belchy06           mentions:  Zane-P
 BennyWillam        mentions:  AlexanderDoherty99
 Boyd-Spalding      mentions:  Belchy06
-BrandonClay        mentions:  BennyWillam
-camerondodson      mentions:  Boyd-Spalding
-Chris-Barty-JCU    mentions:  BrandonClay
+bradanderson1404   mentions:  BennyWillam
+BrandonClay        mentions:  Boyd-Spalding
+Bryce-Fern         mentions:  bradanderson1404
+camerondodson      mentions:  BrandonClay
+Chris-Barty-JCU    mentions:  Bryce-Fern
 Chris-Reppel       mentions:  camerondodson
 connorKeir         mentions:  Chris-Barty-JCU
 DavidNolan         mentions:  Chris-Reppel
@@ -88,10 +91,12 @@ AlexanderDoherty99 mentions:  yangyangli714
 Belchy06           mentions:  ZachKeeffe
 BennyWillam        mentions:  Zane-P
 Boyd-Spalding      mentions:  AlexanderDoherty99
-BrandonClay        mentions:  Belchy06
-camerondodson      mentions:  BennyWillam
-Chris-Barty-JCU    mentions:  Boyd-Spalding
-Chris-Reppel       mentions:  BrandonClay
+bradanderson1404   mentions:  Belchy06
+BrandonClay        mentions:  BennyWillam
+Bryce-Fern         mentions:  Boyd-Spalding
+camerondodson      mentions:  bradanderson1404
+Chris-Barty-JCU    mentions:  BrandonClay
+Chris-Reppel       mentions:  Bryce-Fern
 connorKeir         mentions:  camerondodson
 DavidNolan         mentions:  Chris-Barty-JCU
 DominiqueGregoire  mentions:  Chris-Reppel
@@ -129,11 +134,13 @@ AlexanderDoherty99 mentions:  XavierKoen
 Belchy06           mentions:  yangyangli714
 BennyWillam        mentions:  ZachKeeffe
 Boyd-Spalding      mentions:  Zane-P
-BrandonClay        mentions:  AlexanderDoherty99
-camerondodson      mentions:  Belchy06
-Chris-Barty-JCU    mentions:  BennyWillam
-Chris-Reppel       mentions:  Boyd-Spalding
-connorKeir         mentions:  BrandonClay
+bradanderson1404   mentions:  AlexanderDoherty99
+BrandonClay        mentions:  Belchy06
+Bryce-Fern         mentions:  BennyWillam
+camerondodson      mentions:  Boyd-Spalding
+Chris-Barty-JCU    mentions:  bradanderson1404
+Chris-Reppel       mentions:  BrandonClay
+connorKeir         mentions:  Bryce-Fern
 DavidNolan         mentions:  camerondodson
 DominiqueGregoire  mentions:  Chris-Barty-JCU
 Dssandhu           mentions:  Chris-Reppel
@@ -170,12 +177,14 @@ AlexanderDoherty99 mentions:  TristanBowen
 Belchy06           mentions:  XavierKoen
 BennyWillam        mentions:  yangyangli714
 Boyd-Spalding      mentions:  ZachKeeffe
-BrandonClay        mentions:  Zane-P
-camerondodson      mentions:  AlexanderDoherty99
-Chris-Barty-JCU    mentions:  Belchy06
-Chris-Reppel       mentions:  BennyWillam
-connorKeir         mentions:  Boyd-Spalding
-DavidNolan         mentions:  BrandonClay
+bradanderson1404   mentions:  Zane-P
+BrandonClay        mentions:  AlexanderDoherty99
+Bryce-Fern         mentions:  Belchy06
+camerondodson      mentions:  BennyWillam
+Chris-Barty-JCU    mentions:  Boyd-Spalding
+Chris-Reppel       mentions:  bradanderson1404
+connorKeir         mentions:  BrandonClay
+DavidNolan         mentions:  Bryce-Fern
 DominiqueGregoire  mentions:  camerondodson
 Dssandhu           mentions:  Chris-Barty-JCU
 ElenaReynolds      mentions:  Chris-Reppel
@@ -211,13 +220,15 @@ AlexanderDoherty99 mentions:  ThomasReaston
 Belchy06           mentions:  TristanBowen
 BennyWillam        mentions:  XavierKoen
 Boyd-Spalding      mentions:  yangyangli714
-BrandonClay        mentions:  ZachKeeffe
-camerondodson      mentions:  Zane-P
-Chris-Barty-JCU    mentions:  AlexanderDoherty99
-Chris-Reppel       mentions:  Belchy06
-connorKeir         mentions:  BennyWillam
-DavidNolan         mentions:  Boyd-Spalding
-DominiqueGregoire  mentions:  BrandonClay
+bradanderson1404   mentions:  ZachKeeffe
+BrandonClay        mentions:  Zane-P
+Bryce-Fern         mentions:  AlexanderDoherty99
+camerondodson      mentions:  Belchy06
+Chris-Barty-JCU    mentions:  BennyWillam
+Chris-Reppel       mentions:  Boyd-Spalding
+connorKeir         mentions:  bradanderson1404
+DavidNolan         mentions:  BrandonClay
+DominiqueGregoire  mentions:  Bryce-Fern
 Dssandhu           mentions:  camerondodson
 ElenaReynolds      mentions:  Chris-Barty-JCU
 IsaacBarry         mentions:  Chris-Reppel
