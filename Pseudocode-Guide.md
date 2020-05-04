@@ -164,7 +164,7 @@ Note that we can use "else if" or "otherwise if" but NOT "elif" because that is 
     for count from 1 to 10
         display count
 
-    for each grade in grade_list
+    for each grade in grades
         display grade
 
     repeat n times
@@ -198,7 +198,7 @@ Note that we can use "else if" or "otherwise if" but NOT "elif" because that is 
 
     try
         get number as integer
-        display my_list[number]
+        display some_list[number]
     catch invalid number error
         display invalid number message
     catch index error
@@ -214,11 +214,11 @@ Don't worry about the exact values for your exception names; just make sure it's
 
 ### Lists
 
-    price_list = empty list
-    add price to price_list
-    price_list[0] = 0.0
-    if index < length of price_list
-        display price_list[index]
+    prices = empty list
+    add price to prices
+    prices[0] = 0.0
+    if index < length of prices
+        display prices[index]
 
 Note how similar pseudocode for lists/arrays looks to real code – that's fine. We don't need to make it harder, just to try and be less like code.
 
