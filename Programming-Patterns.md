@@ -5,14 +5,14 @@ For the most part, this guide is not language-specific, so many patterns are pre
 
 
 - [Main program structure](#main-program-structure)
-- [Selection](#selection)
+- [Decision structures](#decision-structures)
   - [if with no else](#if-with-no-else)
   - [if, else](#if-else)
   - [if, elif, else (or switch/case statement)](#if-elif-else-or-switchcase-statement)
   - [if, elif with no trailing else](#if-elif-with-no-trailing-else)
   - [if, if, if](#if-if-if)
   - [Boundary conditions](#boundary-conditions)
-- [Loops](#loops)
+- [Repetition structures](#repetition-structures)
   - [For loops (definite iteration)](#for-loops-definite-iteration)
   - [While loops (indefinite iteration)](#while-loops-indefinite-iteration)
   - [Menus](#menus)
@@ -53,7 +53,7 @@ In the following example pseudocode, the specifics don't matter, but you can see
 
     main()
 
-## Selection
+## Decision structures
 When you need to make a decision in your program, you would usually use one of the following patterns.  
 (See loops below for when you need to repeatedly make decisions, e.g. for most error-checking.)
 
@@ -126,11 +126,11 @@ if score >= 80:
     print("You win a horse :)")  # here, you can win BOTH a car and a horse
 ```
 
-So, as you design your selections, recognise what each pattern is for and how it applies to your situation.  
+So, as you design your decision structures, recognise what each pattern is for and how it applies to your situation.  
 E.g. You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, because you know that is inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
 
 ### Boundary conditions
-This applies to both selection and repetition so it's here between them.  
+This applies to both decision and repetition structures so it's here between them.  
 Some of the most common programming errors happen with boundary conditions and so these should usually always be tested explicitly. In the examples above, 50 is a pass. But if we get our boundary condition wrong, we might have something like:
 
 ```python
@@ -146,7 +146,7 @@ In the second case, this works for now, but we have 2 problems: the *problem dom
 Did you catch that? Always use the values and names in the problem domain - e.g. the problem description says that a _score_ of _50 or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
 It's much harder to make a mistake when you're following what the problem description says... Just check those boundaries when you write them (> 50 or >= 50 or < 50 or <= 50 or == 50...?) and test them!
 
-## Loops
+## Repetition structures
 In most languages, there are multiple kinds of loops and you should choose the most appropriate kind.  
 The most common choice is:
 
@@ -184,7 +184,8 @@ for i, name in enumerate(names):
 
 ### While loops (indefinite iteration)
 Almost all while loops follow the same standard pattern (as below with menus and error checking).  
-Do not force the loop to be True the first time by setting a value for your loop condition variable, and do not use `while True`... unless this is really the best way to do it.
+Do not force the loop to be True the first time by setting a value for your loop condition variable, 
+and do not use `while True`... unless this is really the best way to do it.
 
     <priming read - do something the loop will depend on, e.g. get/calculate a number>
     while <condition based on something from above>:
@@ -221,6 +222,13 @@ Use the if/elif.../else pattern in Python (switch statements in other languages)
         display menu
         get choice
     <do final thing, if needed>
+
+Sometimes inexperienced coders use a `while True` or `while Boolean` loop for menus, 
+and handle the quit option with an extra if, which makes it less readable than our standard pattern 
+since it doesn't clearly indicate how the loop stops.  
+With a readable (meaningful) condition you know without having to read the rest of the code how the loop will end.  
+Also, by having the "final thing" _outside_ the loop, you have less indenting (a Zen of Python value) 
+and it's easier to see that this code runs after the menu loop quits.
 
 ### Error checking
 
@@ -356,12 +364,16 @@ Some good ways to understand function design include asking these questions abou
 * Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using Python's `assert` statement or `doctest` module). You really can't easily "test" functions in any automated way if they get user input or print results.
 
 ## Data storage
-Always store data in the best, most correct, format. E.g. if you read a *price* from console or file input, it will initially be a `string`, but you should convert it and store it as a `float`. If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it that way... leaving the variable as a float.  
+Always store data in the best, most correct, format.  
+E.g. if you read a *price* from console or file input, it will initially be a `string`, but you should convert it and store it as a `float`.  
+If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it that way... leaving the variable as a float.  
 
 (Another example) If you're asking the user to make a yes/no choice, they might click a button or type "yes", but then you would convert this and store it as a `Boolean` because that's the most appropriate type to store a yes/no (True/False) state.
 
-In general, don't store derivable data. This is a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
+In general, don't store derivable data.  
+This creates a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
 E.g. don't store *age* if you already have a *date of birth* (DOB). Doing so can lead to inconsistency, e.g. your age might not get updated when the date changes. Just calculate the age when you need it and it can't be wrong.  
+Don't store the length of a list... that's derivable and can be retrieved at any time (unless you're using a language where this is not the case).
 
 
 ## Never
