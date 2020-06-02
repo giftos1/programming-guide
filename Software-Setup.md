@@ -70,7 +70,7 @@ Enter your new account details when asked in PyCharm installation/setup.
 
 Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
 * Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
-* On PyCharm’s main menu, click Import Settings or File > Import (depending on your OS)
+* On PyCharm’s main menu, import the settings: Manage IDE Settings > Import Settings... or File > Import (depending on your OS)
 * Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
 * Restart PyCharm.
 
