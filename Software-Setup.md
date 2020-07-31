@@ -1,6 +1,6 @@
 # Software Setup
 
-[CP1404 students, skip the first section (only for CP1401) and start here](https://github.com/CP1404/Starter/wiki/Software-Setup/_edit#cp1404---programming-2)
+[CP1404 students, skip the first section (only for CP1401) and start here](https://github.com/CP1404/Starter/wiki/Software-Setup#cp140418045639---programming-2)
 
 ## CP1401/1801/5639 - Programming 1 
 Students in **CP1401** only need Python 3 and PyCharm:
