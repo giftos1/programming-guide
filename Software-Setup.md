@@ -1,7 +1,18 @@
 # Software Setup
 
+[CP1404 students, skip the first section (only for CP1401) and start here](https://github.com/CP1404/Starter/wiki/Software-Setup/_edit#cp1404---programming-2)
 
-To get started, you only _need_ **Python 3**, but to get _everything_ setup and running on your own computer, you need the following for CP1404 (CP1401 students only need Python and PyCharm):
+## CP1401/1801/5639 - Programming 1 
+Students in **CP1401** only need Python 3 and PyCharm:
+
+1. Download and install Python 3 ​from: https://www.python.org/downloads/  
+Choose the option ​*Add python.exe to search path*​ when you install.
+2. [Follow the instructions below to install PyCharm](https://github.com/CP1404/Starter/wiki/Software-Setup/_edit#pycharm)
+3. Stop. Do not install Kivy or Git.
+
+
+## CP1404/1804/5639 - Programming 2 
+
 * Python
 * PyCharm
 * Kivy
