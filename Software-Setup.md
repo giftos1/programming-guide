@@ -7,7 +7,7 @@ Students in **CP1401** only need Python 3 and PyCharm:
 
 1. Download and install Python 3 ​from: https://www.python.org/downloads/  
 Choose the option ​*Add python.exe to search path*​ when you install.
-2. [Follow the instructions below to install PyCharm](https://github.com/CP1404/Starter/wiki/Software-Setup/_edit#pycharm)
+2. [Follow the instructions below to install PyCharm](https://github.com/CP1404/Starter/wiki/Software-Setup#pycharm)
 3. Stop. Do not install Kivy or Git.
 
 
