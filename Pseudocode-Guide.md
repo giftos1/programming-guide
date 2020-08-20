@@ -49,11 +49,12 @@ Pseudocode needs to be well-indented, well-spaced and be consistent in style, so
 
 **Bad**
 
-    if a     >  B           # poorly spaced
-        display message     # unclear (what kind of message?)
-        get x               # poor variable name
-        if this is "y"      # not explicit
-            vent the gas    # not explicit
+    if a     >  B             # poorly spaced
+        display message       # unclear (what kind of message?)
+        get x                 # poor variable name
+        if this is "y"        # not explicit
+        vent the gas          # not explicit, not indented 
+        display last message  # is this meant to be inside or outside the if?... we can't know
 
 **Good**
 
@@ -62,8 +63,29 @@ Pseudocode needs to be well-indented, well-spaced and be consistent in style, so
         get ventGasChoice
         if ventGasChoice is "y"
             ventGas()
+        display farewell message
 
-**Note:** variable names don't have to be in camel-case (e.g. "vent gas choice" or "vent_gas_choice" are okay). This is part of being language independent – there is no fixed or language-related convention. Having said that, you may find it convenient to use the convention for the language you expect to implement in since you can copy and paste into code more easily.
+You must not refer to things that don't exist or use different names for the same thing. Consistency is required.
+
+**Bad**
+
+    get the user's choice
+    if choice is 'Q'
+        display total
+
+Above, one variable that _might_ be the same is referred to as `choice` and `the user's choice`. A programmer should never have to guess if this is the same or different. Be consistent.  
+`total` doesn't exist, so we can't use it. All variables must be introduced appropriately (as is also the case in code).  
+NOTE that some of our examples here are only parts of full pseudocode, so you will see places where we do refer to non-existent names, but this is not a mistake; only an incomplete example to focus on the bit we're concerned with.
+
+**Good**
+
+    total = 0
+    get choice
+    if choice is 'Q'
+        display total
+
+
+**Note:** variable names don't have to be in any specific style like camelCase or underscore_case (e.g. "ventGasChoice", "vent gas choice" or "vent_gas_choice" are all fine). This is part of being language independent – there is no fixed or language-related convention. Having said that, you may find it convenient to use the convention for the language you expect to implement in since you can copy and paste into code more easily.
 
 ## 4. Concise expression
 
@@ -125,12 +147,19 @@ If comments are really necessary, write them on their own lines, surrounded by p
     get name
     get age
 
+If you need to get multiple inputs, just put them together on one like:
+
+    get name, age, salary
+
 ### Terminal output: how to display a variable or message
 
     display "Hello world"
     display name  # where name is a variable
-    display name, age and gender
     display venting gas message
+
+If you need to get multiple inputs, just put them together on one like:
+
+    display name, salary, bonus
 
 **Note:** it is not necessary to replicate the interface in pseudocode by writing the details. The programmer should have access to that part of the planning, and so will know what the "venting gas message" is. Including large quotes makes pseudocode harder to read.
 
@@ -157,7 +186,9 @@ Note that we can use "else if" or "otherwise if" but NOT "elif" because that is 
 
 ### Repetition
 
-    repeat while price > 0
+    total = 0
+    get price
+    while price > 0
         total = total + price
         get price
 
@@ -181,18 +212,18 @@ Note that we can use "else if" or "otherwise if" but NOT "elif" because that is 
 
 ### File input
 
-    open "info.txt" as fileIn for reading
-    get name from fileIn
-    get age from fileIn
-    close fileIn
+    open "info.txt" as file_in for reading
+    get name from file_in
+    get age from file_in
+    close file_in
 
 ### File output
 
-    open "stats.dat" as fileOut for writing
+    open "stats.dat" as file_out for writing
     for each datum in data
-        write datum to fileOut
-        write newline to fileOut
-    close fileOut
+        write datum to file_out
+        write newline to file_out
+    close file_out
 
 ### Exception handling
 
@@ -222,9 +253,9 @@ Don't worry about the exact values for your exception names; just make sure it's
 
 Note how similar pseudocode for lists/arrays looks to real code – that's fine. We don't need to make it harder, just to try and be less like code.
 
-### Maps (a.k.a. dictionaries or associative arrays)
+### Dictionaries (a.k.a. maps or associative arrays)
 
-    name_to_phone = empty map/dictionary
+    name_to_phone = empty dictionary
     name_to_phone[name] = number
     display name_to_phone[name]
 
@@ -232,26 +263,26 @@ Note how similar pseudocode for lists/arrays looks to real code – that's fine.
         display name
 
     for each name:number in name_to_phone
-        display name and number
+        display name, number
 
 ### Classes
 
     class Person
         constructor(name, age, gender)
-            instance.setName(name)
-            instance.setAge(age)
-            instance.setGender(gender)
+            instance.set_name(name)
+            instance.set_age(age)
+            instance.set_gender(gender)
 
         basic getters for name, age, gender
 
         basic setters for name, age
 
-        method setGender(gender)
+        method set_gender(gender)
             if gender in lowercase is not "male" or "female"
                 gender = "female"
-                instance.gender = gender
+            instance.gender = gender
 
-**Note:** getName() etc. are so simple that it's only necessary to specify that they will exist
+**Note:** get_name() etc. are so simple that it's only necessary to specify that they will exist
 (e.g. **basic getters for name, age, gender** ), rather than writing pseudocode.
 
 
@@ -294,7 +325,7 @@ Some things to note:
 
 - Minor details like how to display the output strings are excluded.
 - Obvious things like the need to call main to run the program and that age should be an integer are excluded. It's not wrong to include these, but they're mostly unnecessary.
-- "while name is not blank" could be implemented in lots of different ways in different languages… this pseudocode clearly says what to do, not how to do it.
+- "while name is not blank" could be implemented in lots of different ways in different languages... this pseudocode clearly says what to do, not how to do it.
 - It looks like simple code. (Python looks a lot like good pseudocode.)
 - Very common "syntax" characters like brackets for functions are included, but not language-specific things like colons after else (that's only in some languages).
 
