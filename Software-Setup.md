@@ -6,34 +6,30 @@
 Students in **CP1401** only need Python 3 and PyCharm:
 
 1. Download and install Python 3 ​from: https://www.python.org/downloads/  
-Choose the option ​*Add python.exe to search path*​ when you install.
+(Windows) Choose the option ​*Add python.exe to search path*​ when you install.
 2. [Follow the instructions below to install PyCharm](https://github.com/CP1404/Starter/wiki/Software-Setup#pycharm)
 3. Stop. Do not install Kivy or Git.
 
 
 ## CP1404/1804/5639 - Programming 2 
 
-* Python
-* PyCharm
-* Kivy
+* Python (3.9+)
+* PyCharm (2020.3+)
+* Kivy (2.0+) - note that Kivy < 2.0 is not compatible with Python > 3.7
 * Git
 
 Each of these tools have their own instructions available online, but here I've attempted to compile all of the details you require for everything. Things change, and sometimes you'll find a different/better way is needed. If so, please contact me and let me know what needs updating.
 
-# NOTE: 
-As of February 2019, it seems Kivy is not compatible with Python 3.8. Please choose a version of Python 3.7 if you are doing CP1404 and need Kivy.  
-https://github.com/kivy/kivy/issues/6563
 
 ## GitHub:
 
 If you do not have one already, create a GitHub account.  
 Go to https://github.com and sign up with your JCU email address. *Be sure to use a username that easily identifies you.*  
 
-**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni also have these addresses. **So, in the following step, please choose the option that lets you upload proof, and upload a photo of your current student ID card with the date on it.**
+**Note:** GitHub do not accept our my.jcu.edu.au addresses as student proof because non-student alumni also have these addresses.  
+**So, in the following step, please choose the option that lets you upload proof, and upload a photo of your current student ID card with the date on it.**
 
-Go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories.  
-
-Once you're signed up, get your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
+Go to https://education.github.com/discount_requests/new and enter your details so you can get free private repositories and your GitHub 'pack' with a bunch of free bonuses: http://education.github.com/pack
 
 # Windows
 
@@ -56,9 +52,9 @@ Then in the black window (that's the command prompt), type:
 
 If this shows you that you have Python, then continue with the commands below.  
 If you get an error (python is an unknown command), then you either need to add python to your PATH or change into the directory you installed Python to.  
-E.g. if this were C:\Python36 then type:  
+E.g. if this were C:\Python39 then type:  
 
-    cd c:\Python36  
+    cd c:\Python39  
     python --version  
 
 If that works, then enter the following commands.  
@@ -76,12 +72,13 @@ See below
 *After* you have installed Python...  
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download and install the *Professional* version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+* Download and install the *Professional* version of PyCharm: https://www.jetbrains.com/pycharm/download/index.html  
+Please note that the community edition lacks Flask project support and so is not recommended.  
 Enter your new account details when asked in PyCharm installation/setup.
 
 Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
 * Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
-* On PyCharm’s main menu, import the settings: Manage IDE Settings > Import Settings... or File > Import (depending on your OS)
+* On PyCharm’s File menu, import the settings: Manage IDE Settings > Import Settings... or File > Import (depending on your OS)
 * Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
 * Restart PyCharm.
 
@@ -110,30 +107,24 @@ For installation methods other than using brew and pip, see the instructions on 
 *After* you have installed Python...  
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download and install the *Professional* version of PyCharm for your OS: https://www.jetbrains.com/pycharm/download/index.html  
+* Download and install the *Professional* version of PyCharm: https://www.jetbrains.com/pycharm/download/index.html  
+Please note that the community edition lacks Flask project support and so is not recommended.  
 Enter your new account details when asked in PyCharm installation/setup.
 
 Add KV language auto-completion and syntax highlighting (PyCharm does not know about KV language by default):
 * Download this file https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true
-* On PyCharm’s main menu, click Import Settings or File > Import (depending on your OS)
+* On PyCharm’s File menu, import the settings: Manage IDE Settings > Import Settings... or File > Import (depending on your OS)
 * Select the .jar file you just downloaded and click OK on the dialog with file types ticked.
 * Restart PyCharm.
 
 ## Kivy:
 
-**First**, try just installing Kivy as a normal package via PyCharm (Settings > Project > Interpreter, then click the + button, search for and install "Kivy"). (This worked for Lindsay on MacOS Catalina in February 2020.)   
-Only if that fails, go on to the steps below:  
+First, create a new project [https://github.com/CP1404/Practicals/tree/master/prac_01](see Prac 01) if you need help.  
+Make sure that you select **System Interpreter** And chose the newly-installed Python 3.9+.  
 
-    brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer   
-    pip3 install --upgrade pip  
-    pip3 install Cython==0.26.1  
-    pip3 install kivy
+Install Kivy as you would any Python package via PyCharm: Preferences > Project > Interpreter (you should see your current, NON-VENV! system interpreter), then click the + button, search for and install "Kivy").  
+Note: If you incorrectly selected a venv (Virtual Environment) when you setup your project, then you must change your project to use the system interpreter, and select Python 3.9+, before installing Kivy. If you use a venv, then you need to install all packages again for each new project... and you don't want to do that.
 
-Note: Some people have found that the final command for installing kivy above needs to be replaced by:
-
-    USE_OSX_FRAMEWORKS=0 pip3 install https://github.com/kivy/kivy/zipball/master  
-
-(The second command above should upgrade pip3 AND link the command `pip` to `pip3`, so you don't get `pip: command not found` errors. However, if you do get these errors, just use `pip3` anywhere it says `pip`.)
 
 # Test Setup
 
@@ -146,7 +137,7 @@ If you can run it successfully, it's all good. **Celebrate!**
 
 You can also test your Git & GitHub setup by using PyCharm to clone a repository and run the code:  
 Select *VCS > Checkout from Version Control > GitHub*  
-Then enter your GitHub username and password (not token, unless you want to use one).  
+Then enter your GitHub credentials. 
 Enter our starter repo URL: `https://github.com/CP1404/Starter` in the prompt, clone it to a new folder and open this as a new project.  
 Try and run the check_setup.py file. If it works, you should see a nice big hello button.  
 
