@@ -5,6 +5,36 @@ Here are some useful references for Python style conventions, as expected in CP1
 * The main standard style guide for Python is described in PEP 8 https://www.python.org/dev/peps/pep-0008
 * PEP 257 for docstrings https://www.python.org/dev/peps/pep-0257
 * Here's an example demonstrating PEP 257 docstring styles http://dolphm.com/pep257-good-python-docstrings-by-example
+* This page is a useful collection of naming conventions in some detail https://visualgit.readthedocs.io/en/latest/pages/naming_convention.html
+
+# Naming
+
+The main guideline for good identifier naming is **100% of the identifiers in a program should be meaningful**. Variable names, function names, class names, constants... Choosing good names is surprisingly important! Poor names commonly lead to errors. Good names save time reading and fixing code. Good naming is also a good habit and attitude to get into for increased code quality.
+
+## Conventions for Python names
+
+- `module_name` or `modulename` depending on readability - use the `_` to separate words especially if leaving it out is confusing
+- `ClassName` (known as PascalCase or CapWords or upper CamelCase)
+- `function_name`, `variable_name` (lowercase_with_underscores)
+- `CONSTANT_NAME` (all CAPS with underscores)
+
+Following these conventions means any Python programmer reading your code knows when they see a name like `THIS_THING` it must be a constant, and `ThisThing` must be a class. If they see `ThisThing = 3`, that's just wrong... confusing... takes more work to read and see what's different/wrong.
+
+## Best-practice suggestions:
+- Don't be cute, don’t use abbreviations (What is `atm`?)
+- Avoid names that imply something that isn't true (including: don't reuse names for different things); avoid "disinformation" and inconsistency. E.g., if you use the word "get" to mean "get from input", e.g. `age = get_age()` then don't _also_ use it to mean the thing you got, `get_name = "Monty"` or use the same verb to mean something else, like `bmi = get_bmi(height, weight)` (this should be more like `bmi = calculate_bmi(height, weight)` since we're not "getting").
+- Use pronounceable names (`modymdhms`?)
+- Avoid mental mapping (a = number, b = total). If an identifier name needs a comment to explain it, just improve the name.
+- Make meaningful distinctions (`account`, `account_data`, `account_details`, `account_info` - what's the difference?)
+- Use **nouns for variables** and **verbs for functions**. E.g., `age = get_age()` (`noun = verb()`). `get_result = result()` is confusing.
+- Use the phrase "This function will..." to help you name functions, e.g., "This function will determine_status()`" is a valid sentence, but "This function will status()`" is not. 
+- Use the phrase "This variable stores..." to help you name variables, e.g. "This variable stores a `name`" is a valid sentence, but "This variable stores a `get_name`" is not.
+- Use plurals for collections like lists and avoid plurals for singular values. `for child in children` or `for name in names` works, but if we read `names = "Monty"` or `name = ["Monty", "Python"]`, that's confusing.
+- Boolean variables and functions should be named so conditions are readable and usually start with `is_` or `has_` or similar. E.g., `if is_winner:` is readable, but `if status:` is not.
+- A reasonable way to name dictionaries (aka maps) is the `key_to_value` pattern, e.g., `name_to_phone` or `level_to_reward` (using something like `phones` or `levels` here would imply they are lists/sets/tuples/etc. not dictionaries).
+- There are a number of commonly-used names that you should avoid using for anything else. E.g., `i` is usually an index for a list or similar. `for i in range(n)` makes sense; `for i in children` does not.
+- Never use built-in names like `min`, `sum`, `print`, etc. for your own names as this will override the existing names and prevent you from using them. It's also confusing to the reader. This also goes for module names - don't use `os.py` or `random.py` or other names that are existing Python modules.
+- Do not include a variable's type in it's name (known as "systems Hungarian notation"). Don't use `name_list` (just `names`) or `str_name` (just `name`).
 
 # Commenting
 As always, we follow the [official Python styles for comments](https://www.python.org/dev/peps/pep-0008/#id30).
