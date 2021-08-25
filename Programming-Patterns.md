@@ -55,7 +55,7 @@ In the following example pseudocode, the specifics don't matter, but you can see
 
 ## Decision structures
 When you need to make a decision in your program, you would usually use one of the following patterns.  
-(See loops below for when you need to repeatedly make decisions, e.g. for most error-checking.)
+(See loops below for when you need to repeatedly make decisions, e.g., for most error-checking.)
 
 The examples below will use situations where you want to print a *result* for a given *score*, where `score` is an integer. Each situation could be stand-alone, or part of a loop, like `for score in scores:`
 
@@ -103,8 +103,11 @@ else:
 ```
 
 ### if, elif with no trailing else
-Similar to the if with no else, use this when you want to handle multiple possible results, but there will be some cases where there is no result handled. The results are mutually exclusive, but you're happy to do nothing in some cases. If you use this pattern, ask yourself, "what cases/inputs do I NOT want to handle?"  
-In this example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g. at graduation, they announce which graduates got a University medal, but they don't say which ones did not get a medal.)
+Similar to the if with no else, use this when you want to handle multiple possible results, but there will be some cases where there is no result handled. The results are mutually exclusive, but you're happy to do nothing in some cases.  
+**If you use this pattern, ask yourself, "what cases/inputs do I NOT want to handle?", or "What scenario do I want to ignore?"**  
+If there is no answer to that question, you should not use this pattern.  
+
+In the following example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g., at graduation, they announce which graduates get a University medal, but they don't say which ones do not get a medal.)
 
 ```python
 if score >= 90:
@@ -114,8 +117,8 @@ elif score >= 80:
 ```
 
 ### if, if, if
-Use this when you want multiple outputs/results for a single value. That is, the results are not mutually exclusive. One condition being true does not affect the other conditions.
-In this example, we want to print all the results that a score could achieve.
+Use this when you want multiple outcomes. That is, the results/outcomes are not mutually exclusive. One condition being true does not affect the other conditions.  
+In the following example, we want to print all the results that a score could achieve.
 
 ```python
 if score >= 50:
@@ -127,10 +130,10 @@ if score >= 80:
 ```
 
 So, as you design your decision structures, recognise what each pattern is for and how it applies to your situation.  
-E.g. You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage, because you know that is inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
+E.g., You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage - you know that would be inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
 
 ### Boundary conditions
-This applies to both decision and repetition structures so it's here between them.  
+(This applies to both decision and repetition structures so it's here between them.)  
 Some of the most common programming errors happen with boundary conditions and so these should usually always be tested explicitly. In the examples above, 50 is a pass. But if we get our boundary condition wrong, we might have something like:
 
 ```python
@@ -140,11 +143,11 @@ if score > 50:
 if score > 49:
     print("You passed")
 ```
-In the first case (`score > 50`), this works for all values _greater than_ 50, but it would make 50 a fail, not a pass as it should be. If you test your code using the boundaries as input values, you will see that 50 is not a pass. If you have a program with 7 boundaries (e.g. N, P, C, D, HD, too high, too low), you'll need to test all 7 plus some others.  
-In the second case, this works for now, but we have 2 problems: the *problem domain* specifies that 50 is a pass, so we should use the value `50`, not change it to something we hope works - there's a chance we might make a mistake; secondly, if we change score to be a `float` instead of an `int` we now have failing values like `49.1` that will result in pass when they should not.  
+In the first case (`score > 50`), this works for all values _greater than_ 50, but it would make 50 a fail, not a pass as it should be. If you test your code using the boundaries as input values, you will see that 50 is not a pass. If you have a program with 7 boundaries (e.g., N, P, C, D, HD, too high, too low), you'll need to test all 7, plus some others.  
+In the second case, this works for now, but we have 2 problems: the *problem domain* specifies that 50 is a pass, so we should use the value `50`, not change it to something we hope works - there's a chance we might make a mistake; secondly, if we change score to be a `float` instead of an `int` we now have failing values like `49.1` that will result in pass when they should not!  
 
-Did you catch that? Always use the values and names in the problem domain - e.g. the problem description says that a _score_ of _50 or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
-It's much harder to make a mistake when you're following what the problem description says... Just check those boundaries when you write them (> 50 or >= 50 or < 50 or <= 50 or == 50...?) and test them!
+Did you catch that? **Use the values and names in the problem domain** - e.g., the problem description says that a _score_ of `50` or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
+It's much harder to make a mistake when you're following what the problem description says... Just check those boundaries when you write them (> 50 or >= 50 or < 50 or <= 50 or == 50...?) and test them!  
 
 ## Repetition structures
 In most languages, there are multiple kinds of loops and you should choose the most appropriate kind.  
@@ -153,8 +156,8 @@ The most common choice is:
 - Use *for loops* for **definite** iteration, like `for item in sequence...`
 - Use *while loops* for **indefinite** iteration, like `while condition...`
 
-Using a while loop and maintaining your own counter (e.g. using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for!  
-Using a for loop and maintaining your own counter (e.g. iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you.  
+Using a while loop and maintaining your own counter (e.g., using a while loop to iterate through the numbers from 1 to 10) would be considered an *anti-pattern*, since this is what for loops are for!  
+Using a for loop and maintaining your own counter (e.g., iterating through elements in a list and manually using +1 for the index) would also be poor, since for loops can do this for you.  
 
 ### For loops (definite iteration)
 For loops are mostly used when you want to do something with each item in a sequence.   
@@ -187,8 +190,8 @@ Almost all while loops follow the same standard pattern (as below with menus and
 Do not force the loop to be True the first time by setting a value for your loop condition variable, 
 and do not use `while True`... unless this is really the best way to do it.
 
-    <priming read - do something the loop will depend on, e.g. get/calculate a number>
-    while <condition based on something from above>:
+    <priming read - do something the loop will depend on, e.g., get/calculate a number>
+    while <condition based on something from above>
         <body of the loop - do the thing you want to repeat>
         <same as the priming read again>
     <do next thing now that the loop is finished (condition was false)>
@@ -232,11 +235,11 @@ and it's easier to see that this code runs after the menu loop quits.
 
 ### Error checking
 
-    <priming read - do something the loop depends on>
-    while <condition based on something from above>:
+    <priming read - get some input>
+    while <input is bad>
         display error message
-        <same as the priming read again>
-    do next thing now that you know the 'something' is valid
+        <same as the priming read again - get some input>
+    do next thing now that you know the input is valid
 
 **Example:**
 
@@ -304,14 +307,14 @@ Example structure:
 
 (note no need for else or continue, it will move to the next item)
 
-Note that Python (and many languages) have neat shortcuts for filtering, e.g. using *list comprehensions*:
+Note that Python (and many languages) have neat shortcuts for filtering, e.g., using *list comprehensions*:
 
     filtered_items = [item for item in items if item matches what we want]
 
 
 ## Working with Booleans
 
-In most cases, where you are dealing with a condition or value and you care about whether it is true or false, then you never need to compare to `True` or `False`. E.g. instead of:
+In most cases, where you are dealing with a condition or value and you care about whether it is true or false, then you never need to compare to `True` or `False`. E.g., instead of:
 
     if condition == True:
     ... or
@@ -361,18 +364,18 @@ Some good ways to understand function design include asking these questions abou
 * What if we wanted to rewrite the program's interface in French or Farsi? We should not have to change the processing function, because it should not do any user interface things (input or output on the screen).  
 * What if we wanted to get our input from a file instead of the user? We should not have to change the processing function because it should not get any user input. A well-designed function *can* be used with input either from the user or a file (or anywhere), because it takes in the input as parameters.
 * Same as above for if we wanted to write the output to a file instead of display it on the screen... the processing function shouldn't care where the data (input parameters) comes from, or where the results (return values) go, since that's not its job.
-* Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g. using Python's `assert` statement or `doctest` module). You really can't easily "test" functions in any automated way if they get user input or print results.
+* Functions designed like this are more **testable**. You can write test code that passes in inputs and compares outputs (returned values) to known correct results for those inputs (e.g., using Python's `assert` statement or `doctest` module). You really can't easily "test" functions in any automated way if they get user input or print results.
 
 ## Data storage
 Always store data in the best, most correct, format.  
-E.g. if you read a *price* from console or file input, it will initially be a `string`, but you should convert it and store it as a `float`.  
-If you want to print it using string formatting (e.g. `$23.40`), don't store it as a string, just print it that way... leaving the variable as a float.  
+E.g., if you read a *price* from console or file input, it will initially be a `string`, but you should convert it and store it as a `float`.  
+If you want to print it using string formatting (e.g., `$23.40`), don't store it as a string, just print it that way... leaving the variable as a float.  
 
 (Another example) If you're asking the user to make a yes/no choice, they might click a button or type "yes", but then you would convert this and store it as a `Boolean` because that's the most appropriate type to store a yes/no (True/False) state.
 
 In general, don't store derivable data.  
 This creates a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
-E.g. don't store *age* if you already have a *date of birth* (DOB). Doing so can lead to inconsistency, e.g. your age might not get updated when the date changes. Just calculate the age when you need it and it can't be wrong.  
+E.g., don't store *age* if you already have a *date of birth* (DOB). Doing so can lead to inconsistency, e.g., your age might not get updated when the date changes. Just calculate the age when you need it and it can't be wrong.  
 Don't store the length of a list... that's derivable and can be retrieved at any time (unless you're using a language where this is not the case).
 
 
@@ -381,6 +384,6 @@ Here are a few things you should _never_ do... You can consider these to be "ant
 ("Never" is a strong word, and there will likely be some rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
 
 * Never replace function parameters: If you have a function that takes in a parameter (x), you will never want to set that variable (x) immediately... otherwise, why would you pass it in?
-* Never convert to the same type: don't convert from type A to type A. E.g. in Python, the `input` function _always_ returns a _str_ type, so you *never* need to write something like `x = str(input("?"))`... or `y = int(0)`.
-* Never use the verbose (unbound) syntax for method calls unless you need it: You should always prefer the concise (bound) format. E.g. use `"Hello".upper()` not `str.upper("Hello")`.
+* Never convert to the same type: don't convert from type A to type A. E.g., in Python, the `input` function _always_ returns a _str_ type, so you *never* need to write something like `x = str(input("?"))`... or `y = int(0)`.
+* Never use the verbose (unbound) syntax for method calls unless you need it: You should always prefer the concise (bound) format. E.g., use `"Hello".upper()` not `str.upper("Hello")`.
 * Never use `while True` loops if you can easily enough use a "standard" while loop. If you have to write an if statement to break out of a loop, that if-condition should probably just be your normal loop condition.
