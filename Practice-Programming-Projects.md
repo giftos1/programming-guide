@@ -2,8 +2,8 @@
 
 Here is a collection of projects for you to practise your programming with, arranged by topic.
 
-- [Selection](#selection)
-- [Loops](#loops)
+- [Decision](#decision)
+- [Repetition](#repetition)
 - [Functions](#functions)
 - [File I/O](#file-io)
 - [Lists and Dictionaries](#lists-and-dictionaries)
@@ -11,10 +11,11 @@ Here is a collection of projects for you to practise your programming with, arra
 - [Recursion](#recursion)
 - [More Study Ideas](#more-study-ideas)
 
-## Selection
+## Decision
 
 1. Write a program to check if someone can vote. They need to be 18 or over and be enrolled to vote.   
 You could do two versions - one with nested ifs and one with the 'and' operator.
+
 2. Write the **Kebab Kalkulator**: 
 The program should have base prices for small ($7.50) or large ($10) kebabs (constants).  
 The user should choose a size, and how many extra toppings they want: up to 2 toppings are free, 3 or more toppings are 50c each (but not counting the free ones!).  
@@ -23,14 +24,33 @@ a small kebab with 3 toppings = $8
 a large kebab with 2 toppings = $10  
 large with 10 = $14  
 Ask the user for their options, then print the final price.
-3. Implement an expert system based on a flowchart you make or find. Each diamond (in a properly drawn example) is a question.  
+
+3. 5. Janey Davey works at JD Hi Fi and tries to upsell products with extended warranties. She wants a program to show the itemised and total price for a product with warranty.  
+Warranties for products under $100 cost $10
+Warranties for more expensive products cost 10% of the product price, but the maximum is $199.  
+Think about how much work it would take to modify these "configuration" values...   
+Would you have to modify more than one place if the new maximum were $250 instead of $199, or the new rate went to 12% instead of 10%?  
+**Example 1** 
+Product price: $45.45
+Warranty = $10
+Total price = $55.45  
+**Example 2**
+Product price: $450
+Warranty = $45.00
+Total price = $495.00  
+**Example 3**
+Product price: $4500
+Warranty = $199.00
+Total price = $4699.00  
+
+4. Implement an expert system based on a flowchart you make or find. Each diamond (in a properly drawn example) is a question.  
 Examples:
     1. http://3.bp.blogspot.com/_GY_NfovZtsk/RjjxEL2weSI/AAAAAAAAAFM/EeYNtwkhYW0/s400/problemsolving_flowchart.PNG
     2. http://xkcd.com/627/
     3. http://www.mathworks.com/help/techdoc/creating_plots/driver_flowchart.png
     4. http://www.mentalfloss.com/blogs/wp-content/uploads/2010/05/345horse.jpg
 
-## Loops
+## Repetition
 
 1. Write a menu-driven program that loops until the user quits. The options are (G)et name, (U)ppercase, (L)owercase, (Q)uit.  
 The program should start by asking the user for their name before the menu, but they can (G)et a new name. U/L print the name in either uppercase or lowercase.
@@ -39,13 +59,19 @@ Error-check the second number to make sure it is higher than the first.
 3. (Write this as a function if you like.)  
 Print a "progress bar" based on a percentage (number). E.g. 50% would print something like: `|*****-----|`, 10% would print `|*---------|`  
 
-4. Modify your previous progress bar code so you can specify a width for the bar (if using a function, pass in the percentage and width). E.g. 50% of 18 would be:`|*********---------|`
+4. Modify your previous progress bar code so you can specify a width for the bar (if using a function, pass in the percentage and width). E.g., 50% of 18 would be:`|*********---------|`
+
+5. Caffeinated Cameron has started SpecialTea Cofftea (he thinks the name is clever, but others find it confusing). This startup's new innovation is a funky menu where customers enter: "T" for.. Tea (get it? ;) or "C" for coffee, until they enter "Q" for quit. Any different inputs result in "Error".  
+At the end of their caffeination session (when they quit), the program shows them how much they owe: Each T costs $2.10, Coffees are $3.45.
 
 ## Functions
 
 1. Write a function that calculates which of two products is cheaper based on a quantity and price. The function will take 4 parameters - the quantity and price of each product, and output either "First" or "Second".
 2. Modify your house cost program from the pracs so it uses functions. For the calculation function, pass it the options the user chose (including premium and family discount).
-3. Write a function
+3. Use an appropriate function... Timmy Timer wants to know how long he has been doing something in minutes and seconds, but his timepiece only shows total seconds.
+He wants you to help him calculate the total time in minutes and seconds.  
+Example: He inputs `134` and the program shows something like: `2 minutes and 14 seconds`
+
 
 ## File I/O
 
