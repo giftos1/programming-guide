@@ -71,76 +71,6 @@ Z4MUS              mentions:  vanessatilber
 ```
 ## Prac 6:
 ```
-4ndrewJ            mentions:  HenryVooren
-Adam-Albert        mentions:  4ndrewJ
-AdamD99            mentions:  Adam-Albert
-aidenlignieres     mentions:  AdamD99
-AntonyHockin       mentions:  aidenlignieres
-anumsri            mentions:  AntonyHockin
-Artrix-8           mentions:  anumsri
-ashmauro           mentions:  Artrix-8
-AylaGunawan        mentions:  ashmauro
-azariahpundari1    mentions:  AylaGunawan
-BeauCorlis         mentions:  azariahpundari1
-BisarGaming        mentions:  BeauCorlis
-BradleyPatterson   mentions:  BisarGaming
-Bramers            mentions:  BradleyPatterson
-BraydanNewman      mentions:  Bramers
-BrendenColledge    mentions:  BraydanNewman
-BrentonLunn        mentions:  BrendenColledge
-CallumGracie95     mentions:  BrentonLunn
-chanteneviljoen    mentions:  CallumGracie95
-ChrisMarriner      mentions:  chanteneviljoen
-codysullivan1      mentions:  ChrisMarriner
-DanL-Smith         mentions:  codysullivan1
-danniellejones     mentions:  DanL-Smith
-ellBasso           mentions:  danniellejones
-EthanB-C           mentions:  ellBasso
-FinnyJ             mentions:  EthanB-C
-Gauselc            mentions:  FinnyJ
-IvanSabijon        mentions:  Gauselc
-Jack-Francis       mentions:  IvanSabijon
-JacksonEckersley   mentions:  Jack-Francis
-JacobMadeley       mentions:  JacksonEckersley
-JakeEdm            mentions:  JacobMadeley
-JarrodPW           mentions:  JakeEdm
-JoeHallows         mentions:  JarrodPW
-joespelta          mentions:  JoeHallows
-JoshuaFinch27      mentions:  joespelta
-KaiMeloni          mentions:  JoshuaFinch27
-KalynAnne          mentions:  KaiMeloni
-KazukiPJCU         mentions:  KalynAnne
-khan-pog           mentions:  KazukiPJCU
-LiautDicksonMaluga mentions:  khan-pog
-Louis-Bui          mentions:  LiautDicksonMaluga
-LukeBalfourJCU     mentions:  Louis-Bui
-Macro1989          mentions:  LukeBalfourJCU
-Matthew11715       mentions:  Macro1989
-McTenshi           mentions:  Matthew11715
-meghancamp1        mentions:  McTenshi
-MichaelRobinson84  mentions:  meghancamp1
-Myjuic3            mentions:  MichaelRobinson84
-nikmarhin          mentions:  Myjuic3
-OG-79              mentions:  nikmarhin
-Pauly-GG           mentions:  OG-79
-RhysErnestSheehan  mentions:  Pauly-GG
-Rod93-2020         mentions:  RhysErnestSheehan
-SamBarrett1        mentions:  Rod93-2020
-sammesser97        mentions:  SamBarrett1
-Shad-Man99         mentions:  sammesser97
-Singe7113          mentions:  Shad-Man99
-StevenDebondi      mentions:  Singe7113
-StevenM42          mentions:  StevenDebondi
-Tanemcdo           mentions:  StevenM42
-ThomasCornes       mentions:  Tanemcdo
-TreidynA           mentions:  ThomasCornes
-tunnelview         mentions:  TreidynA
-vanessatilber      mentions:  tunnelview
-Z4MUS              mentions:  vanessatilber
-HenryVooren        mentions:  Z4MUS
-```
-## Prac 7:
-```
 4ndrewJ            mentions:  Z4MUS
 Adam-Albert        mentions:  HenryVooren
 AdamD99            mentions:  4ndrewJ
@@ -209,7 +139,7 @@ vanessatilber      mentions:  TreidynA
 Z4MUS              mentions:  tunnelview
 HenryVooren        mentions:  vanessatilber
 ```
-## Prac 8:
+## Prac 7:
 ```
 4ndrewJ            mentions:  vanessatilber
 Adam-Albert        mentions:  Z4MUS
@@ -279,7 +209,7 @@ vanessatilber      mentions:  ThomasCornes
 Z4MUS              mentions:  TreidynA
 HenryVooren        mentions:  tunnelview
 ```
-## Prac 9:
+## Prac 8:
 ```
 4ndrewJ            mentions:  tunnelview
 Adam-Albert        mentions:  vanessatilber
@@ -349,7 +279,7 @@ vanessatilber      mentions:  Tanemcdo
 Z4MUS              mentions:  ThomasCornes
 HenryVooren        mentions:  TreidynA
 ```
-## Prac 10:
+## Prac 9:
 ```
 4ndrewJ            mentions:  TreidynA
 Adam-Albert        mentions:  tunnelview
@@ -418,6 +348,76 @@ tunnelview         mentions:  StevenDebondi
 vanessatilber      mentions:  StevenM42
 Z4MUS              mentions:  Tanemcdo
 HenryVooren        mentions:  ThomasCornes
+```
+## Prac 10:
+```
+4ndrewJ            mentions:  ThomasCornes
+Adam-Albert        mentions:  TreidynA
+AdamD99            mentions:  tunnelview
+aidenlignieres     mentions:  vanessatilber
+AntonyHockin       mentions:  Z4MUS
+anumsri            mentions:  HenryVooren
+Artrix-8           mentions:  4ndrewJ
+ashmauro           mentions:  Adam-Albert
+AylaGunawan        mentions:  AdamD99
+azariahpundari1    mentions:  aidenlignieres
+BeauCorlis         mentions:  AntonyHockin
+BisarGaming        mentions:  anumsri
+BradleyPatterson   mentions:  Artrix-8
+Bramers            mentions:  ashmauro
+BraydanNewman      mentions:  AylaGunawan
+BrendenColledge    mentions:  azariahpundari1
+BrentonLunn        mentions:  BeauCorlis
+CallumGracie95     mentions:  BisarGaming
+chanteneviljoen    mentions:  BradleyPatterson
+ChrisMarriner      mentions:  Bramers
+codysullivan1      mentions:  BraydanNewman
+DanL-Smith         mentions:  BrendenColledge
+danniellejones     mentions:  BrentonLunn
+ellBasso           mentions:  CallumGracie95
+EthanB-C           mentions:  chanteneviljoen
+FinnyJ             mentions:  ChrisMarriner
+Gauselc            mentions:  codysullivan1
+IvanSabijon        mentions:  DanL-Smith
+Jack-Francis       mentions:  danniellejones
+JacksonEckersley   mentions:  ellBasso
+JacobMadeley       mentions:  EthanB-C
+JakeEdm            mentions:  FinnyJ
+JarrodPW           mentions:  Gauselc
+JoeHallows         mentions:  IvanSabijon
+joespelta          mentions:  Jack-Francis
+JoshuaFinch27      mentions:  JacksonEckersley
+KaiMeloni          mentions:  JacobMadeley
+KalynAnne          mentions:  JakeEdm
+KazukiPJCU         mentions:  JarrodPW
+khan-pog           mentions:  JoeHallows
+LiautDicksonMaluga mentions:  joespelta
+Louis-Bui          mentions:  JoshuaFinch27
+LukeBalfourJCU     mentions:  KaiMeloni
+Macro1989          mentions:  KalynAnne
+Matthew11715       mentions:  KazukiPJCU
+McTenshi           mentions:  khan-pog
+meghancamp1        mentions:  LiautDicksonMaluga
+MichaelRobinson84  mentions:  Louis-Bui
+Myjuic3            mentions:  LukeBalfourJCU
+nikmarhin          mentions:  Macro1989
+OG-79              mentions:  Matthew11715
+Pauly-GG           mentions:  McTenshi
+RhysErnestSheehan  mentions:  meghancamp1
+Rod93-2020         mentions:  MichaelRobinson84
+SamBarrett1        mentions:  Myjuic3
+sammesser97        mentions:  nikmarhin
+Shad-Man99         mentions:  OG-79
+Singe7113          mentions:  Pauly-GG
+StevenDebondi      mentions:  RhysErnestSheehan
+StevenM42          mentions:  Rod93-2020
+Tanemcdo           mentions:  SamBarrett1
+ThomasCornes       mentions:  sammesser97
+TreidynA           mentions:  Shad-Man99
+tunnelview         mentions:  Singe7113
+vanessatilber      mentions:  StevenDebondi
+Z4MUS              mentions:  StevenM42
+HenryVooren        mentions:  Tanemcdo
 ```
 
 The list was generated by this Python program:  https://github.com/lindsaymarkward/HelpLindsay/blob/master/code_review_order.py
