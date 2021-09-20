@@ -350,8 +350,10 @@ This brings us to a **rule** for using constants:
 
 **If you have a constant, then you MUST use it everywhere the value exists.**  
 
-Here's our code with three introduced constants. It works the same way, but is more _readable_ and _extensible_ (easier to modify).  
-You might notice that the constants are all at the top, like configuration 'variables'.
+Here's our code with three introduced constants. It works the same way, but is more _readable_ and _maintainable_ (easier to modify and extend).  
+You might notice that the constants are all at the top, like configuration 'variables'.  
+
+One more thing to notice: There's no real benefit in turning the literal `1` into a constant as it's not a value that will ever change or that needs further explaining.  
 
 ```python3
 # version 2 - notice how it is easier to read,
