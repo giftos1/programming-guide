@@ -329,9 +329,29 @@ if number_of_products > 5:
 print(f"{number_of_products} x ${32.5:.2f} products = ${total:.2f}")
 ```
 
-The program works, but contains "magic numbers" that are used more than once.  
+The above program works, but contains "magic numbers" that are used more than once.  
+Magic numbers are not evil. You do NOT need to change any literal into a named constant, but there are some general guidelines to help decide when you should probably use constants.
 
-WIP...
+- If the value is used more than once
+- If introducing a name is more helpful than the number
+
+Notice in this program that we reuse the numbers ``5 and `32.5` more than once.  
+Again, it's not a _rule_ that we replace these with constants, but it could be considered good practice.  
+Note that these numbers are used in both strings and as numbers in calculations.  
+
+A good way to consider the use of constants is to ask yourself a question like:  
+_"What if I wanted to change this later?"_  
+E.g., what if the threshold for a discount changed from 5 items to 10 items? How many places would I need to change my code? One is better than two, so let's use a constant.
+
+There's another interesting one in this example. `10%` is here twice, so... "what if the discount changed from 10% to 15%?"  
+The value `10%` only appears in the string, but the value `0.1` appears in the calculation, and these are the same.  
+We do not want to break our program by having a constant for the 0.1 and forgetting to use it for the print 10% part.  
+This brings us to a **rule** for using constants:
+
+**If you have a constant, then you MUST use it everywhere the value exists.**  
+
+Here's our code with three introduced constants. It works the same way, but is more _readable_ and _extensible_ (easier to modify).  
+You might notice that the constants are all at the top, like configuration 'variables'.
 
 ```python3
 # version 2 - notice how it is easier to read,
