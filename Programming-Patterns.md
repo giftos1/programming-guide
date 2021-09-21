@@ -320,7 +320,7 @@ Consider the following program:
 ```python3
 print("If you buy over 5 items, save 10%!")
 number_of_products = int(input("Number of products: "))
-while number_of_products < 1:
+while number_of_products <= 0:
     print("Invalid number")
     number_of_products = int(input("Number of products: "))
 total = number_of_products * 32.5
@@ -353,7 +353,7 @@ This brings us to a **rule** for using constants:
 Here's our code with three introduced constants. It works the same way, but is more _readable_ and _maintainable_ (easier to modify and extend).  
 You might notice that the constants are all at the top, like configuration 'variables'.  
 
-One more thing to notice: There's no real benefit in turning the literal `1` into a constant as it's not a value that will ever change or that needs further explaining.  
+One more thing to notice: There's no real benefit in turning the literal `0` into a constant as it's not a value that will ever change or that needs further explaining. It's just... zero (no products or some products).    
 
 ```python3
 # version 2 - notice how it is easier to read,
@@ -364,7 +364,7 @@ DISCOUNT_RATE = 0.1
 
 print(f"If you buy over {DISCOUNT_THRESHOLD} items, save {DISCOUNT_RATE * 100:.0f}%!")
 number_of_products = int(input("Number of products: "))
-while number_of_products < 1:
+while number_of_products <= 0:
     print("Invalid number")
     number_of_products = int(input("Number of products: "))
 total = number_of_products * ITEM_PRICE
