@@ -329,5 +329,40 @@ Some things to note:
 - It looks like simple code. (Python looks a lot like good pseudocode.)
 - Very common "syntax" characters like brackets for functions are included, but not language-specific things like colons after else (that's only in some languages).
 
+## Another Example
+
+### Pseudocode
+```
+DISCOUNT_THRESHOLD = 5
+ITEM_PRICE = 32.5
+DISCOUNT_RATE = 0.1
+
+get number_of_products
+while number_of_products <= 0
+    print error message
+    get number_of_products
+total = number_of_products * ITEM_PRICE
+if number_of_products > DISCOUNT_THRESHOLD
+    total -= total * DISCOUNT_RATE
+print number_of_products, ITEM_PRICE, total
+```
+
+### Python
+```python
+DISCOUNT_THRESHOLD = 5
+ITEM_PRICE = 32.5
+DISCOUNT_RATE = 0.1
+
+print(f"If you buy over {DISCOUNT_THRESHOLD} items, save {DISCOUNT_RATE * 100:.0f}%!")
+number_of_products = int(input("Number of products: "))
+while number_of_products <= 0:
+    print("Invalid number")
+    number_of_products = int(input("Number of products: "))
+total = number_of_products * ITEM_PRICE
+if number_of_products > DISCOUNT_THRESHOLD:
+    total -= total * DISCOUNT_RATE
+print(f"{number_of_products} x ${ITEM_PRICE:.2f} products = ${total:.2f}")
+
+```
 
 This document was developed by Trevor Andersen and Lindsay Ward, Discipline of IT, James Cook University.
