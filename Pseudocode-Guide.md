@@ -1,8 +1,11 @@
 # Guide to Good Pseudocode
 
-Pseudocode is a useful early step in designing and planning computer programs. The idea is that it is easier and more natural to think in terms of an algorithm (the steps to achieve a solution) rather than in terms of actual computer code. Writing code _after_ writing pseudocode should be a simple translation process – converting the algorithm to a program in a specific language. The exact implementation will depend on the language, which is why pseudocode should be "language agnostic".
+Pseudocode is a useful early step in designing and planning computer programs. The idea is that it is easier and more natural to think in terms of an algorithm (the steps to achieve a solution) rather than in terms of actual computer code.  
 
-There are no rules to produce "perfect" pseudocode, since it doesn't have to compile, but this document provides guidelines for writing *good* pseudocode.
+Writing code _after_ writing pseudocode should be a simple translation process – converting the algorithm to a program in a specific language. The exact implementation will depend on the language, which is why pseudocode should be "language agnostic".  
+A programmer should be able to implement (code) a solution from a well-written algorithm (pseudocode) without having to solve any more problems (only trivial ones).
+
+There are no *rules* to produce "perfect" pseudocode, since it doesn't have to compile, but this document provides guidelines for writing *good* pseudocode.
 
 ## Attributes of Good Pseudocode
 
@@ -65,7 +68,7 @@ Pseudocode needs to be well-indented, well-spaced and be consistent in style, so
             ventGas()
         display farewell message
 
-You must not refer to things that don't exist or use different names for the same thing. Consistency is required.
+You must not refer to things that don't exist or use different names for the same thing. **Consistency is required.**
 
 **Bad**
 
@@ -153,15 +156,16 @@ If you need to get multiple inputs, just put them together on one like:
 
 ### Terminal output: how to display a variable or message
 
-    display "Hello world"
-    display name  # where name is a variable
-    display venting gas message
+    print "Hello world"
+    print name
+    print venting gas message
 
-If you need to get multiple inputs, just put them together on one like:
+If you need to print multiple outputs, just put them together on one like:
 
-    display name, salary, bonus
+    print name, salary, bonus
 
-**Note:** it is not necessary to replicate the interface in pseudocode by writing the details. The programmer should have access to that part of the planning, and so will know what the "venting gas message" is. Including large quotes makes pseudocode harder to read.
+**Note:** it is not necessary to replicate the interface in pseudocode by writing the details. The programmer should have access to that part of the planning, and so will know what the "venting gas message" is. Including large quotes makes pseudocode harder to read.  
+There are no required words, so `print`, `display` or similar are all fine... but be consistent within one program.
 
 ### Arithmetic
 
@@ -294,9 +298,9 @@ Note how similar pseudocode for lists/arrays looks to real code – that's fine.
         while name is not blank
             get age
             if is_adult(age)
-                display name is an adult
+                print name is an adult
             else
-                display name is a minor
+                print name is a minor
             get name
 
     function is_adult(age)
@@ -306,6 +310,7 @@ Note how similar pseudocode for lists/arrays looks to real code – that's fine.
 ### Python
 ```python
     def main():
+        print("Welcome to the name & age program that brings happiness.")
         name = input("Enter your name (blank to quit): ")
         while name != "":
             age = int(input("Enter your age: "))
@@ -323,7 +328,7 @@ Note how similar pseudocode for lists/arrays looks to real code – that's fine.
 
 Some things to note:
 
-- Minor details like how to display the output strings are excluded.
+- Minor details like the welcome message and how to display the output strings are excluded.
 - Obvious things like the need to call main to run the program and that age should be an integer are excluded. It's not wrong to include these, but they're mostly unnecessary.
 - "while name is not blank" could be implemented in lots of different ways in different languages... this pseudocode clearly says what to do, not how to do it.
 - It looks like simple code. (Python looks a lot like good pseudocode.)
@@ -362,7 +367,6 @@ total = number_of_products * ITEM_PRICE
 if number_of_products > DISCOUNT_THRESHOLD:
     total -= total * DISCOUNT_RATE
 print(f"{number_of_products} x ${ITEM_PRICE:.2f} products = ${total:.2f}")
-
 ```
 
 This document was developed by Trevor Andersen and Lindsay Ward, Discipline of IT, James Cook University.
