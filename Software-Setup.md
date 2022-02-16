@@ -7,9 +7,7 @@ Students in **CP1401** ONLY need Python 3 and PyCharm:
 (Windows) Choose the option ​*Add Python to PATH*​ when you install.
 
 2. Install PyCharm
-* Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
-* Download and install the *Professional* version of PyCharm: https://www.jetbrains.com/pycharm/download/index.html  
-Enter your new account details when asked in PyCharm installation/setup.
+* Download and install the free *Community* version of PyCharm: https://www.jetbrains.com/pycharm/download/index.html  
 
 3. Stop. Do not install Kivy or Git.
 
@@ -52,6 +50,8 @@ The Windows default location can be hard to find, so I recommend changing this t
 
 ## PyCharm:
 *After* you have installed Python...  
+
+Currently, JetBrains doesn't accept `my.jcu.edu.au` addresses as proof of student status. If you would like the Professional versions of JetBrains software, you will need to provide official documentation, not just your email address: 
 
 * Sign up for a free JetBrains account at: https://www.jetbrains.com/shop/eform/students using your JCU email address.
 * Download and install the *Professional* version of PyCharm: https://www.jetbrains.com/pycharm/download/index.html  
