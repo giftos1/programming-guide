@@ -122,12 +122,12 @@ Use this when you want multiple outcomes. That is, the results/outcomes are not 
 In the following example, we want to print all the results that a score could achieve.
 
 ```python
-if score >= 50:
-    print("You passed")
 if score >= 90:
     print("You win a car!")
 if score >= 80:
     print("You win a horse :)")  # here, you can win BOTH a car and a horse
+if score >= 50:
+    print("You passed")
 ```
 
 So, as you design your decision structures, recognise what each pattern is for and how it applies to your situation.  
