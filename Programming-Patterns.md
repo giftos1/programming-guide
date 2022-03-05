@@ -22,6 +22,7 @@ For the most part, this guide is not language-specific, so many patterns are pre
   - [Finding](#finding)
   - [Filtering](#filtering)
 - [Constants](#constants)
+- [Don't Repeat Yourself (DRY)](#tba)
 - [Working with Booleans](#working-with-booleans)
 - [Function design](#function-design)
   - [Why is this important?](#why-is-this-important)
@@ -373,6 +374,52 @@ if number_of_products > DISCOUNT_THRESHOLD:
 print(f"{number_of_products} x ${ITEM_PRICE:.2f} products = ${total:.2f}")
 ```
 
+## Don't Repeat Yourself (DRY)
+
+DRY is a principle to help avoid 'bad patterns' rather than a pattern itself.  
+Here's a counter-example to show you what NOT to do.
+
+```python3
+score = int(input("Score: "))
+if score < 0:  # condition 1
+    result = score * 2
+    print("Bad score :(")
+elif score >= 0 and score < 20:  # condition 2
+    result = score * 2
+    print("Score is OK.")
+elif score > 20:  # condition 3
+    result = score * 2
+    print("Your score is good!")
+print("Double your score is", result)
+```
+
+This program works, so what's the problem?
+
+- Remember, we don't _just_ want working code, we want _good_ code!
+- condition 2 is only checked if condition 1 is False. if condition 1 is False, this is because score must be not < 0,
+  so `score >= 0 ` is redundant. It will _always_ be True. condition 2 should be replaced by just `score < 20`
+- condition 3 appears to check if condition 2 was False, which we already know, but because this code uses "elif no
+  else" we might just make a mistake like getting the boundary condition wrong. What happens if the user enters `20`?
+  **Oops!** The right choice of pattern is important! We can fix this by changing condition 3 to `score >= 20` but then
+  we ask a question we can guarantee will always be True when we get to it (since the first 2 were False), so that's
+  repeating ourselves. DRY.
+- Lastly, in all three paths, we repeat the line `result = score * 2`. Again, this works, but is not good. Since we
+  always want to do this, it should go _outside_ the decision structure.
+
+Here's the code with these problems fixed. Ah, that's better :)
+
+```python3
+score = int(input("Score: "))
+if score < 0:
+    print("Bad score :(")
+elif score < 20:
+    print("Score is OK.")
+else:
+    print("Your score is good!")
+result = score * 2
+print("Double your score is", result)
+```
+
 ## Working with Booleans
 
 In most cases, where you are dealing with a condition or value and you care about whether it is true or false, then you never need to compare to `True` or `False`. E.g., instead of:
@@ -444,7 +491,8 @@ Don't store the length of a list... that's derivable and can be retrieved at any
 Here are a few things you should _never_ do... You can consider these to be "anti-patterns".   
 ("Never" is a strong word, and there will likely be some rare situations where you might maybe sometimes want to do these things, but it's very unlikely.)
 
-* Never replace function parameters: If you have a function that takes in a parameter (x), you will never want to set that variable (x) immediately... otherwise, why would you pass it in?
+* Never set a variable value you don't use. Why define/set a variable, ignore what you just did and set it to something new?
+* Never replace function parameters: If you have a function that takes in a parameter (x), you will never want to set that variable (x) immediately... otherwise, why would you pass it in? (This is the same as the previous point.)
 * Never convert to the same type: don't convert from type A to type A. E.g., in Python, the `input` function _always_ returns a _str_ type, so you *never* need to write something like `x = str(input("?"))`... or `y = int(0)`.
 * Never use the verbose (unbound) syntax for method calls unless you need it: You should always prefer the concise (bound) format. E.g., use `"Hello".upper()` not `str.upper("Hello")`.
 * Never use `while True` loops if you can easily enough use a "standard" while loop. If you have to write an if statement to break out of a loop, that if-condition should probably just be your normal loop condition.
