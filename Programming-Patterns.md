@@ -22,7 +22,7 @@ For the most part, this guide is not language-specific, so many patterns are pre
   - [Finding](#finding)
   - [Filtering](#filtering)
 - [Constants](#constants)
-- [Don't Repeat Yourself (DRY)](#tba)
+- [Don't Repeat Yourself (DRY)](#dont-repeat-yourself-dry)
 - [Working with Booleans](#working-with-booleans)
 - [Function design](#function-design)
   - [Why is this important?](#why-is-this-important)
