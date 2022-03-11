@@ -132,7 +132,7 @@ if score >= 50:
 ```
 
 So, as you design your decision structures, recognise what each pattern is for and how it applies to your situation.  
-E.g., You would not use the "if, if, if" pattern for determining a grade (N, C, HD...) from a percentage - you know that would be inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
+E.g., You would not use the "if, if, if" pattern for determining a grade (F, C, HD...) from a percentage - you know that would be inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
 
 ### Boundary conditions
 (This applies to both decision and repetition structures so it's here between them.)  
@@ -145,7 +145,7 @@ if score > 50:
 if score > 49:
     print("You passed")
 ```
-In the first case (`score > 50`), this works for all values _greater than_ 50, but it would make 50 a fail, not a pass as it should be. If you test your code using the boundaries as input values, you will see that 50 is not a pass. If you have a program with 7 boundaries (e.g., N, P, C, D, HD, too high, too low), you'll need to test all 7, plus some others.  
+In the first case (`score > 50`), this works for all values _greater than_ 50, but it would make 50 a fail, not a pass as it should be. If you test your code using the boundaries as input values, you will see that 50 is not a pass. If you have a program with 7 boundaries (e.g., F, P, C, D, HD, too high, too low), you'll need to test all 7, plus some others.  
 In the second case, this works for now, but we have 2 problems: the *problem domain* specifies that 50 is a pass, so we should use the value `50`, not change it to something we hope works - there's a chance we might make a mistake; secondly, if we change score to be a `float` instead of an `int` we now have failing values like `49.1` that will result in pass when they should not!  
 
 Did you catch that? **Use the values and names in the problem domain** - e.g., the problem description says that a _score_ of `50` or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
