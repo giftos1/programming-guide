@@ -173,7 +173,7 @@ There are no required words, so `print`, `display` or similar are all fine... bu
     nett = gross – tax
     average = total / count (use floating point arithmetic)
 
-### Selection
+### Decision Structures
 
     if age >= 65
         price = price – seniorDiscount
@@ -188,7 +188,7 @@ There are no required words, so `print`, `display` or similar are all fine... bu
 Strings like "Too hot!" are short enough that they don't detract from readability, and so can be directly included.
 Note that we can use "else if" or "otherwise if" but NOT "elif" because that is specific to Python and not normal English.
 
-### Repetition
+### Repetition Structures
 
     total = 0
     get price
