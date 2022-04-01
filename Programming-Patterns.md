@@ -336,7 +336,7 @@ Magic numbers are not evil. You do NOT need to change any literal into a named c
 - If the value is used more than once
 - If introducing a name is more helpful than the number
 
-Notice in this program that we reuse the numbers ``5 and `32.5` more than once.  
+Notice in this program that we reuse the numbers `5` and `32.5` more than once.  
 Again, it's not a _rule_ that we replace these with constants, but it could be considered good practice.  
 Note that these numbers are used in both strings and as numbers in calculations.  
 
