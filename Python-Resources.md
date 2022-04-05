@@ -6,5 +6,6 @@ Please note that your uni subject course materials are always the best starting 
 * http://www.pythonchallenge.com - A gamified Python challenge to help you learn.
 * http://askpython.com - Materials and exercises for the Python 3 programming language. In this course you will learn how to write basic code and see examples.
 * https://www.codewars.com - Level up by completing programming challenges (lots of language options); see and rate solutions from others.
+* https://adventofcode.com - Not Python, but any language. This is a fun annual (Advent, before Christmas) programming challenge.
 
 If you know of any other great resources, let us know and we might add them to this list.
