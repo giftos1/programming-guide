@@ -3,31 +3,7 @@ This page contains standard 'patterns' that you should get used to. When you nee
 For the most part, this guide is not language-specific, so many patterns are presented as *pseudocode*.  
 *Python 3* is used where actual code is provided... and Python is similar enough to pseudocode that this is usually suitable as a pattern.
 
-
-- [Main program structure](#main-program-structure)
-- [Decision structures](#decision-structures)
-  - [if with no else](#if-with-no-else)
-  - [if, else](#if-else)
-  - [if, elif, else (or switch/case statement)](#if-elif-else-or-switchcase-statement)
-  - [if, elif with no trailing else](#if-elif-with-no-trailing-else)
-  - [if, if, if](#if-if-if)
-  - [Boundary conditions](#boundary-conditions)
-- [Repetition structures](#repetition-structures)
-  - [For loops (definite iteration)](#for-loops-definite-iteration)
-  - [While loops (indefinite iteration)](#while-loops-indefinite-iteration)
-  - [Menus](#menus)
-  - [Error checking](#error-checking)
-  - [Exception-based error checking](#exception-based-error-checking)
-  - [Function with error checking](#function-with-error-checking)
-  - [Finding](#finding)
-  - [Filtering](#filtering)
-- [Constants](#constants)
-- [Don't Repeat Yourself (DRY)](#dont-repeat-yourself-dry)
-- [Working with Booleans](#working-with-booleans)
-- [Function design](#function-design)
-  - [Why is this important?](#why-is-this-important)
-- [Data storage](#data-storage)
-- [Never](#never)
+Use the menu on the right to select the section you want.
 
 ## Main program structure
 For most programs, you will have a `main` function and a number of other functions.  
@@ -56,13 +32,13 @@ In the following example pseudocode, the specifics don't matter, but you can see
     main()
 
 ## Decision structures
-When you need to make a decision in your program, you would usually use one of the following patterns.  
+When you need to make a decision in your program, you usually use one of the following patterns.  
 (See loops below for when you need to repeatedly make decisions, e.g., for most error-checking.)
 
 The examples below will use situations where you want to print a *result* for a given *score*, where `score` is an integer. Each situation could be stand-alone, or part of a loop, like `for score in scores:`
 
-### if with no else
-Use this if you want to do something when the condition is true, but do nothing when it's false.  
+### if, no else
+Use this if you want to do something when the condition is true, but do nothing when it's false. Like, if it's raining, take an umbrella. You don't need to say "else don't take an umbrella".   
 In this example, we don't want to print anything for the non-exceptional scores, so there's no else.
     
 ```python
@@ -82,7 +58,7 @@ else:
 ### if, else
 Use this if you want to do something when the condition is true, and something different when it's false.  
 In this example, we want to print a result for the score no matter what its value is.
-Note that we do not need a second condition to handle the "fail" case, because if the score is not >= 50 we already know that it must be < 50.
+Note that we do not need a second condition (elif) to handle the "fail" case, because if the score is not >= 50 we already know that it must be < 50.
 
 ```python
 if score >= 50:
@@ -91,7 +67,7 @@ else:
     print("Fail")
 ```
 
-### if, elif, else (or switch/case statement)
+### if, elif, else
 Use this if you want to handle all cases in some way - in our example, there will be an output printed for every possible score. This is the pattern that we use for menus as well - handle each menu option we know about and the trailing else handles the invalid option (see below).  
 In this example, we always want to print one result for the score no matter what its value is.
 
@@ -104,10 +80,14 @@ else:
     print("Bad")
 ```
 
-### if, elif with no trailing else
-Similar to the if with no else, use this when you want to handle multiple possible results, but there will be some cases where there is no result handled. The results are mutually exclusive, but you're happy to do nothing in some cases.  
-**If you use this pattern, ask yourself, "what cases/inputs do I NOT want to handle?", or "What scenario do I want to ignore?"**  
-If there is no answer to that question, you should not use this pattern.  
+### if, elif, no else
+Similar to the if with no else, use this when you want to handle multiple possible cases, but there will be some cases where there is no result/outcome handled. The cases are mutually exclusive, but you're happy to do nothing in some cases.  
+This is rare.  
+**If you use this pattern, ask yourself:**
+
+- **"what case(s) do I NOT want to handle?", or "What scenario(s) do I want to ignore?"**  
+
+If there is no answer to that question, you should **not** use this pattern. (Often you've chosen a last elif that should just be an else.)  
 
 In the following example, the very high scores win a prize, but the others don't, and we don't need to tell them. (E.g., at graduation, they announce which graduates get a University medal, but they don't say which ones do not get a medal.)
 
@@ -132,7 +112,7 @@ if score >= 50:
 ```
 
 So, as you design your decision structures, recognise what each pattern is for and how it applies to your situation.  
-E.g., You would not use the "if, if, if" pattern for determining a grade (F, C, HD...) from a percentage - you know that would be inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
+E.g., You would not use the "if, if, if" pattern for determining a grade (F, C, HD...) from a percentage because you don't want multiple outcomes (grades) - you know that would be inefficient since those grades are mutually exclusive - as soon as we know what grade it is, we don't need to ask any more.
 
 ### Boundary conditions
 (This applies to both decision and repetition structures so it's here between them.)  
@@ -148,7 +128,8 @@ if score > 49:
 In the first case (`score > 50`), this works for all values _greater than_ 50, but it would make 50 a fail, not a pass as it should be. If you test your code using the boundaries as input values, you will see that 50 is not a pass. If you have a program with 7 boundaries (e.g., F, P, C, D, HD, too high, too low), you'll need to test all 7, plus some others.  
 In the second case, this works for now, but we have 2 problems: the *problem domain* specifies that 50 is a pass, so we should use the value `50`, not change it to something we hope works - there's a chance we might make a mistake; secondly, if we change score to be a `float` instead of an `int` we now have failing values like `49.1` that will result in pass when they should not!  
 
-Did you catch that? **Use the values and names in the problem domain** - e.g., the problem description says that a _score_ of `50` or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
+Did you catch that?  
+**Use the values and names in the problem domain** - e.g., the problem description says that a _score_ of `50` or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
 It's much harder to make a mistake when you're following what the problem description says... Just check those boundaries when you write them (> 50 or >= 50 or < 50 or <= 50 or == 50...?) and test them!  
 
 ## Repetition structures
