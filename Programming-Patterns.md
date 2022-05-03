@@ -462,10 +462,18 @@ If you want to print it using string formatting (e.g., `$23.40`), don't store it
 
 (Another example) If you're asking the user to make a yes/no choice, they might click a button or type "yes", but then you would convert this and store it as a `Boolean` because that's the most appropriate type to store a yes/no (True/False) state.
 
-In general, don't store derivable data.  
+In general, **don't store derivable data**.  
 This creates a *maintenance burden*. Even if your code works correctly, when you maintain it and add to it, you have to remember to update the same information in multiple places.  
 E.g., don't store *age* if you already have a *date of birth* (DOB). Doing so can lead to inconsistency, e.g., your age might not get updated when the date changes. Just calculate the age when you need it and it can't be wrong.  
-Don't store the length of a list... that's derivable and can be retrieved at any time (unless you're using a language where this is not the case).
+Don't store the length of a list... that's derivable and can be retrieved at any time (unless you're using a language where this is not the case).  
+Don't store two constants/variables when one is just derived from the other. Like in the example below... we should NOT have to change two constants, just the first one:
+
+```python3
+MAXIMUM = 10
+HALF_MAX = 5
+
+print(f"Enter a number between {HALF_MAX} and {MAXIMUM}")
+```
 
 
 ## Never
