@@ -35,6 +35,7 @@ Following these conventions means any Python programmer reading your code knows 
 - There are a number of commonly-used names that you should avoid using for anything else. E.g., `i` is usually an index for a list or similar. `for i in range(n)` makes sense; `for i in children` does not.
 - Never use built-in names like `min`, `sum`, `print`, etc. for your own names as this will override the existing names and prevent you from using them. It's also confusing to the reader. This also goes for module names - don't use `os.py` or `random.py` or other names that are existing Python modules.
 - Do not include a variable's type in it's name (known as "systems Hungarian notation"). Don't use `name_list` (just `names`) or `str_name` (just `name`).
+- Avoid ambiguous names, including `check`. What does "check" mean? To get something valid? To check an existing value is valid (then it should sound Boolean)? To keep getting something until it's valid? To...? 
 
 # Commenting
 As always, we follow the [official Python styles for comments](https://www.python.org/dev/peps/pep-0008/#id30).
