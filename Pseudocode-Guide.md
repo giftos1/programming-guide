@@ -212,7 +212,7 @@ Note that we can use "else if" or "otherwise if" but NOT "elif" because that is 
 
 ### Function calls
 
-    do_something(azimuth, altitude)
+    result = do_something(azimuth, altitude)
 
 ### File input
 
