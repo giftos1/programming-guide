@@ -1,19 +1,22 @@
 This page contains standard 'patterns' that you should get used to. When you need to perform one of these tasks, follow the standard pattern.
 
+Use the menu on the right to choose a section.
+
+[Go here for our style guide (things like naming and commenting)](https://github.com/CP1404/Starter/wiki/Styles-and-Conventions)
+
 For the most part, this guide is not language-specific, so many patterns are presented as *pseudocode*.  
 *Python 3* is used where actual code is provided... and Python is similar enough to pseudocode that this is usually suitable as a pattern.
-
-Use the menu on the right to select the section you want.
 
 ## Main program structure
 For most programs, you will have a `main` function and a number of other functions.  
 Think of main as the whole program with the other functions as the tools that main uses, with the details abstracted away.  
-main should go at the top of your file, and someone reading your code for the first time should be able to look at main and understand what the program does... that is, main should "look like" the whole program.  
-In the following example pseudocode, the specifics don't matter, but you can see the program structure and how the functions contain the detail:
+
+main should go at the top of your file, and someone reading your code for the first time should be able to read only main and understand what the program does... that is, main should "look like" the whole program.  
+In the following example pseudocode, the specifics don't matter, but you can see the program structure and how the functions contain the detail. Notice that the order of the first few items is what we expect based on Python best-practices (e.g., global constants come after imports, which come after the module docstring comment).
 
     """ module-level docstring """
     import statements
-    constants
+    CONSTANTS
 
     function main()
         opening statement
@@ -33,9 +36,9 @@ In the following example pseudocode, the specifics don't matter, but you can see
 
 ## Decision structures
 When you need to make a decision in your program, you usually use one of the following patterns.  
-(See loops below for when you need to repeatedly make decisions, e.g., for most error-checking.)
+(See the repetition section below for when you need to repeatedly make decisions, e.g., for most error-checking.)
 
-The examples below will use situations where you want to print a *result* for a given *score*, where `score` is an integer. Each situation could be stand-alone, or part of a loop, like `for score in scores:`
+The examples below use scenarios where you want to print a *result* for a given *score*, where `score` is an integer. Each situation could be stand-alone, or part of a loop, like `for score in scores:`
 
 ### if, no else
 Use this if you want to do something when the condition is true, but do nothing when it's false. Like, if it's raining, take an umbrella. You don't need to say "else don't take an umbrella".   
