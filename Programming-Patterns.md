@@ -135,6 +135,27 @@ Did you catch that?
 **Use the values and names in the problem domain** - e.g., the problem description says that a _score_ of `50` or more_ is a _pass_, so use the values and names: `score`, `50`, `pass`.  
 It's much harder to make a mistake when you're following what the problem description says... Just check those boundaries when you write them (> 50 or >= 50 or < 50 or <= 50 or == 50...?) and test them!  
 
+### Decision or Repetition?
+
+Choose decision (if...) when you wish to do something at most once (0 or 1.  
+Choose repetition (while/for) when you wish to do something potentially more than once (0 or more).  
+
+Here is an example of the difference between `if` and `while`
+
+**One:**
+```
+if I am hungry
+    eat a mouthful
+```
+**Two:**
+```
+while I am hungry
+    eat a mouthful 
+```
+With the first one (`if`), I only eat one mouthful... I might still be hungry!  
+With the second (`while`), there's repetition, so I eat as many mouthfuls as needed until I am not hungry.  
+In both cases, if/while I'm not hungry, I don't eat any mouthfuls.
+
 ## Repetition structures
 In most languages, there are multiple kinds of loops and you should choose the most appropriate kind.  
 The most common choice is:
